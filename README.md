@@ -1,28 +1,18 @@
 # Odin James portfolio
 
-Responsive portfolio inspired by the supplied black/yellow film-collage design board.
+English photography and film portfolio with a collage homepage.
 
-## Preview in GitHub Codespaces
+## Preview
 
-On GitHub, choose **Code → Codespaces → Create codespace on main**. The included development container starts the website automatically. Open the **Ports** tab and click the browser icon for port **3000** to see your preview. Keep the port private unless you want to share it.
+GitHub Pages automatically deploys pushes to main using .github/workflows/pages.yml.
+Expected address: https://odinajames-alt.github.io/portfolio/
 
-For an existing Codespace, pull the latest changes and choose **Codespaces: Rebuild Container** from the command palette to apply the configuration. Alternatively, run `npm run dev` in the terminal and open port 3000.
+Codespaces: open this repository in a Codespace and open port 3000. For an existing Codespace, pull main and run git lfs pull, then npm run dev.
 
-## Run
+## Local development
 
-Node.js 20 or newer. No dependencies or installation required.
+Node.js 20 or newer. Run git lfs pull first to download the UKM film, then npm run dev. No npm dependencies are required. Run npm run check to check JavaScript syntax.
 
-```sh
-npm run dev
-```
+MP4 files are tracked using Git LFS. The Pages workflow downloads the real video before deployment.
 
-The development server uses port 3000, or the `PORT` environment variable.
-Run `npm run check` for JavaScript syntax validation.
-
-## Content still needed
-
-Temporary photographs are served from Unsplash; fonts are served from Google Fonts. Project titles are taken from the design reference and are not confirmed credits. The site labels this material as draft content. No contact address, video link, year, or personal history has been invented.
-
-The supplied homepage camera photo and About portrait are stored in `assets/`. Still needed: 2–4 collage photos, 6–12 gallery photos, and project covers/stills. Add approved images to `assets/`, then update the content arrays in `app.js`. Supply project descriptions, years, roles, credits, video links, a bio, contact email, and social links. Add video players once actual video URLs are available.
-
-Routes use URL hashes, so the site can also be hosted as static files without server rewrite rules. The Node server is for local development.
+See CONTENT-NEEDED.md for remaining pictures and project details.
