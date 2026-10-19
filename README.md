@@ -16,3 +16,7 @@ Node.js 20 or newer. Run git lfs pull first to download the UKM film, then npm r
 MP4 files are tracked using Git LFS. The Pages workflow downloads the real video before deployment.
 
 See CONTENT-NEEDED.md for remaining pictures and project details.
+
+## Languages and film covers
+
+The header toggles English and Norwegian Bokmål on every route, and remembers the choice in browser localStorage. i18n.js contains both interface dictionaries and the Bokmål project translations. Keep both languages complete whenever content changes. Film titles remain recognisable proper names; other copy, captions, labels and accessibility descriptions are localized. Film covers use selected frames with a matching visual treatment and also serve as video posters.
