@@ -2,7 +2,7 @@ const images={hero:'assets/odin-filming.jpg',city:'assets/cover-needed.svg',conc
 const work=[
 {id:'ukm',video:'assets/ukm-festival-film.mp4',title:'UKM Festival Introduksjonsvideo',type:'Promotional film',image:images.city,category:'films',year:'2026',role:'Director · Camera · Cinematography · Editor',description:'UKM Østfold gave me the task of creating an introduction video for young people, showing what Fredrikstad has to offer them. I took responsibility for the whole production: directing, camera operation, cinematography, editing, and everything in between. Through the project, I learned how to communicate with companies, agree on dates, and coordinate the production schedule. It gave me practical experience that I can bring into future projects.'},
 {id:'gym',title:'The Gym',type:'Short film',image:images.hero,category:'films',description:'My first-ever film. I include it here to show where I started and the contrast with what I know now. It is a record of learning, experimentation, and growth.'},
-{id:'fomophone',title:'FOMOPHONE',type:'Short film',image:images.camera,category:'films'},
+{id:'gym-part-2',title:'The Gym Part 2',type:'Short film',image:images.camera,category:'films'},
 {id:'johannes',title:'Johannes Groth Concert',type:'Live production',image:images.concert,category:'projects'},
 {id:'blime',title:'BliME-videoen',type:'School project',image:images.forest,category:'projects'},
 {id:'respawn',title:'Respawn Østfold',type:'Livestream production',image:images.street,category:'projects'}];
@@ -40,3 +40,4 @@ function toggleContact(button){
 }
 app.addEventListener('click',e=>{const contact=e.target.closest('[data-reveal-contact]');if(contact)toggleContact(contact);const photo=e.target.closest('[data-photo]');if(photo)showPhoto(Number(photo.dataset.photo));const filter=e.target.closest('[data-filter]');if(filter){document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===filter);b.setAttribute('aria-pressed',String(b===filter));});renderPhotos(filter.dataset.filter);}});
 viewer.querySelector('.close').onclick=()=>viewer.close();viewer.querySelector('.next').onclick=()=>showPhoto(current+1);viewer.querySelector('.previous').onclick=()=>showPhoto(current-1);viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close();});document.addEventListener('keydown',e=>{if(viewer.open){if(e.key==='ArrowRight')showPhoto(current+1);if(e.key==='ArrowLeft')showPhoto(current-1);}});document.querySelector('.menu').onclick=()=>{const open=document.querySelector('nav').classList.toggle('open');document.querySelector('.menu').setAttribute('aria-expanded',String(open));};document.querySelector('#year').textContent=new Date().getFullYear();window.addEventListener('hashchange',render);render();
+
