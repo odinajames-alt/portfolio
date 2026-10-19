@@ -1,0 +1,12 @@
+{
+  "name": "Odin James Portfolio",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Portfolio website",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postStartCommand": "nohup npm run dev > /tmp/portfolio-dev.log 2>&1 &"
+}
