@@ -1,11 +1,127 @@
 const images={hero:'assets/odin-filming.jpg',city:'assets/cover-needed.svg',concert:'assets/glenghuset.jpg',mountain:'assets/odin-portrait.jpg',street:'assets/cover-needed.svg',camera:'assets/cover-needed.svg',lake:'assets/concert-blue.jpg',forest:'assets/blime.jpg'};
 const work=[
-{id:'ukm',video:'assets/ukm-festival-film.mp4',title:'UKM Festival Introduksjonsvideo',type:'Promotional film',image:images.city,category:'films',year:'2026',role:'Director · Camera · Cinematography · Editor',description:'UKM Østfold gave me the task of creating an introduction video for young people, showing what Fredrikstad has to offer them. I took responsibility for the whole production: directing, camera operation, cinematography, editing, and everything in between. Through the project, I learned how to communicate with companies, agree on dates, and coordinate the production schedule. It gave me practical experience that I can bring into future projects.'},
-{"id": "gym", "title": "The Gym", "type": "Short film · Episode 1", "image": "assets/the-gym-cover.jpg", "video": "assets/the-gym.mp4", "category": "films", "role": "Director · Producer · Screenwriter · Camera · Cinematography · Editor · All production roles except acting", "description": "The Gym films were the first film content I ever made. They are rough early attempts, and I know the quality does not reflect what I can do now. I share them here to show where I started and the contrast with the skills I have developed since. I handled every production role except acting: directing, producing, writing the script, camera work, cinematography, editing, and everything in between."},
-{"id": "gym-part-2", "title": "The Gym Part 2", "type": "Short film · Episode 2", "image": "assets/the-gym-part-2-cover.jpg", "video": "assets/the-gym-part-2.mp4", "category": "films", "role": "Director · Producer · Screenwriter · Camera · Cinematography · Editor · All production roles except acting", "description": "The Gym films were the first film content I ever made. They are rough early attempts, and I know the quality does not reflect what I can do now. I share them here to show where I started and the contrast with the skills I have developed since. I handled every production role except acting: directing, producing, writing the script, camera work, cinematography, editing, and everything in between."},
-{id:'johannes',title:'Johannes Groth Concert',type:'Live production',image:images.concert,category:'projects'},
-{id:'blime',title:'BliME-videoen',type:'School project',image:images.forest,category:'projects'},
-{id:'respawn',title:'Respawn Østfold',type:'Livestream production',image:images.street,category:'projects'}];
+  {
+    "id": "ukm",
+    "video": "assets/ukm-festival-film.mp4",
+    "title": "UKM Festival Introduksjonsvideo",
+    "type": "Promotional film",
+    "image": "assets/cover-needed.svg",
+    "category": "films",
+    "year": "2026",
+    "role": "Director · Camera · Cinematography · Editor",
+    "description": "For UKM Østfold and Kultur i Fredrikstad, I helped create an introduction to Fredrikstad’s cultural activities and places for young people. The film was intended for ninth-graders at Kulturkonfirmasjonen at St. Croix and young people visiting the UKM festival from across Østfold. I took the lead on planning and location communication, filmed all the footage, organised the media, and edited the finished film.",
+    "details": [
+      [
+        "From planning to filming",
+        "I contacted each location, agreed filming times, and used the script to plan the shots we needed. At each venue, I chose wide shots to introduce the space and closer shots to show the activities, people, and details."
+      ],
+      [
+        "Camera and editing",
+        "I filmed with a Sony FS5 and edited in Adobe Premiere Pro. I cut to the music, worked with the script and voice-over, and used UKM transitions to connect the locations in a film aimed at a young audience."
+      ],
+      [
+        "What I learned",
+        "I developed my professional communication, scheduling, file organisation, and ability to take responsibility across a production. Recovering the edit from an autosave also taught me to save regularly and maintain backups."
+      ]
+    ]
+  },
+  {
+    "id": "gym",
+    "title": "The Gym",
+    "type": "Short film · Episode 1",
+    "image": "assets/the-gym-cover.jpg",
+    "video": "assets/the-gym.mp4",
+    "category": "films",
+    "role": "Director · Producer · Screenwriter · Camera · Cinematography · Editor · All production roles except acting",
+    "description": "The Gym films were among my earliest filmmaking attempts, following FOMOphone. They are rough early work, and their quality does not reflect what I can do now. I include them to show where I started and the contrast with the skills I have developed since. I handled every production role except acting: directing, producing, writing the script, camera work, cinematography, editing, and everything in between.",
+    "year": "2025"
+  },
+  {
+    "id": "gym-part-2",
+    "title": "The Gym Part 2",
+    "type": "Short film · Episode 2",
+    "image": "assets/the-gym-part-2-cover.jpg",
+    "video": "assets/the-gym-part-2.mp4",
+    "category": "films",
+    "role": "Director · Producer · Screenwriter · Camera · Cinematography · Editor · All production roles except acting",
+    "description": "The Gym films were among my earliest filmmaking attempts, following FOMOphone. They are rough early work, and their quality does not reflect what I can do now. I include them to show where I started and the contrast with the skills I have developed since. I handled every production role except acting: directing, producing, writing the script, camera work, cinematography, editing, and everything in between.",
+    "year": "2026"
+  },
+  {
+    "id": "fomophone",
+    "title": "FOMOphone",
+    "type": "Advertising exercise · First film",
+    "image": "assets/fomophone-cover.jpg",
+    "video": "assets/fomophone.mp4",
+    "category": "films",
+    "year": "2025",
+    "description": "FOMOphone was the very first film I ever made. I had only three days to create an advertisement based on a Helsenorge brief, showing how people can become addicted to their phones. It is a rough first attempt, included here as the starting point of my filmmaking journey and a contrast with what I can do today."
+  },
+  {
+    "id": "johannes",
+    "title": "Johannes Groth Concert",
+    "type": "Live production",
+    "image": "assets/glenghuset.jpg",
+    "category": "projects",
+    "year": "2026",
+    "role": "Camera operator · Left-side camera",
+    "description": "I operated the left-side camera for a three-camera production of Johannes Groth’s concert at Glenghuset in Sarpsborg. My job was to follow the performance, choose varied shots, and provide coverage that complemented the other cameras.",
+    "details": [
+      [
+        "Planning and production",
+        "I helped choose camera positions that gave us useful angles without obstructing the audience. During the concert, I monitored battery power and worked with the crew to keep our coverage continuous."
+      ],
+      [
+        "Solving problems live",
+        "Some angles could not see everyone on stage, so we divided our attention between performers to make sure the combined footage covered the whole show."
+      ],
+      [
+        "What I learned",
+        "This production strengthened my camera planning, teamwork, and ability to respond to a live performance. Next time, I would check every camera angle more thoroughly before the show."
+      ]
+    ]
+  },
+  {
+    "id": "blime",
+    "title": "BliME-videoen",
+    "type": "School project",
+    "image": "assets/blime.jpg",
+    "category": "projects",
+    "year": "2026"
+  },
+  {
+    "id": "respawn",
+    "title": "Respawn Østfold",
+    "type": "Livestream production",
+    "image": "assets/cover-needed.svg",
+    "category": "projects",
+    "year": "2026"
+  },
+  {
+    "id": "kulturnatt",
+    "title": "Kulturnatt Fredrikstad",
+    "type": "Event photography",
+    "image": "assets/kulturnatt.jpg",
+    "category": "projects",
+    "year": "2026",
+    "role": "Photographer · Litteraturhuset",
+    "description": "Our class was hired to document Kulturnatt Fredrikstad. I was based at Litteraturhuset, photographing the activities, performances, people, and atmosphere throughout the event.",
+    "details": [
+      [
+        "Photographing the event",
+        "I followed the programme and worked with a three-person group to cover different rooms. I varied wide views of the stage and audience with tighter photographs of people and details, including stage-side photographs during Hkeem’s performance."
+      ],
+      [
+        "Working with the schedule",
+        "When we missed the planned time for the spray workshop, we returned later and still captured participants and the atmosphere."
+      ],
+      [
+        "What I learned",
+        "The assignment gave me experience photographing a real event for a client. I developed my timing and camera technique, and learned to plan coverage and priorities more carefully while staying ready for unexpected moments."
+      ]
+    ]
+  }
+];
 const photos=[{"src": "assets/glenghuset.jpg", "title": "Glenghuset — behind the scenes", "category": "Behind the scenes"}, {"src": "assets/kulturnatt.jpg", "title": "Kulturnatt — behind the scenes", "category": "Behind the scenes"}, {"src": "assets/blime.jpg", "title": "BliME — behind the scenes", "category": "Behind the scenes"}, {"src": "assets/barneopera.jpg", "title": "Barneopera — behind the scenes", "category": "Behind the scenes"}, {"src": "assets/concert-red.jpg", "title": "In the red light", "category": "Live"}, {"src": "assets/concert-blue.jpg", "title": "Between songs", "category": "Live"}, {"src": "assets/concert-haze.jpg", "title": "Through the haze", "category": "Live"}, {"src": "assets/concert-light.jpg", "title": "Into the light", "category": "Live"}];
 const note='';
 const app=document.querySelector('#app');
@@ -17,7 +133,7 @@ else if(route==='films'||route==='projects'){const films=route==='films';app.inn
 else if(route==='photography'){app.innerHTML=heading('Photography','On stage and behind the camera. Concert photography and moments from production.')+`<section class="section page-grid"><div class="filters" aria-label="Filter photographs">${['All','Live','Behind the scenes'].map((c,i)=>`<button data-filter="${c}" class="${i===0?'active':''}" aria-pressed="${i===0}">${c}</button>`).join('')}</div><div class="photo-grid" id="photos"></div>${note}</section>`;renderPhotos('All');}
 else if(route==='about'){app.innerHTML=`<section class="section"><div class="about-layout"><div><div class="eyebrow">The person behind the camera</div><h2 style="color:var(--yellow)">About me</h2><p>I’m Odin James, based in Sarpsborg, Norway. I make films, take photographs, and look for stories worth sharing.</p><p>For UKM Østfold, I created an introduction video about Fredrikstad for young people — taking on directing, camera work, cinematography, and editing. Along the way, I learned to communicate with companies and coordinate production dates.</p><p class="draft-note">My work spans personal films, photography, and live productions.</p><a class="text-link" href="#contact">LET’S MAKE SOMETHING ↗</a></div><div class="collage"><img src="assets/odin-portrait.jpg" alt="Portrait of Odin James"><span class="hand">Always looking a little closer.</span></div></div><div class="skills">${[['01','Filmmaking','From an idea to the final frame.'],['02','Photography','People, places, and passing moments.'],['03','Live production','Stories as they happen.']].map(s=>`<div><span class="hand">${s[0]}</span><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join('')}</div></section>`;}
 else if(route==='contact'){app.innerHTML=`<section class="section contact-page"><div class="eyebrow">Have a story in mind?</div><h2>Let’s create<br>something good.</h2><p>For film projects, photography, collaborations, or a simple hello — this is where we’ll connect.</p><div class="contact-gate"><button type="button" class="contact-reveal" data-reveal-contact aria-expanded="false" aria-controls="contact-details">Reveal contact details ↗</button><div id="contact-details" class="contact-items" hidden></div></div><p class="draft-note">Based in Sarpsborg, Norway. Get in touch about your next project.</p></section>`;}
-else if(route.startsWith('work/')){const p=work.find(p=>p.id===route.split('/')[1]);if(!p){location.hash='films';return;}app.innerHTML=`<section class="section"><a class="text-link" href="#${p.category}">← BACK TO ${p.category.toUpperCase()}</a><div class="detail" style="margin-top:30px"><div>${p.video?`<video class="detail-image" controls playsinline preload="metadata" ${p.image.endsWith(".jpg")?`poster="${p.image}"`:""} aria-label="${p.title}"><source src="${p.video}" type="video/mp4">Your browser does not support embedded video. <a href="${p.video}">Download the film</a>.</video>`:`<img class="detail-image" src="${p.image}" alt="${p.title} cover">`}<h2>${p.title}</h2><div class="eyebrow">${p.type}</div><p>${p.description||"The story behind this project is coming soon. This page will feature the finished film, behind-the-scenes stills, and details about my role in the production."}</p>${p.video?`<p><a class="text-link" href="${p.video}" download>DOWNLOAD THE FILM ↓</a></p>`:p.description?'<p class="draft-note">Video and film stills will be added here.</p>':note}</div><aside><img src="${p.image}" alt="Project image"><dl><dt>PROJECT</dt><dd>${p.title}</dd><dt>FORMAT</dt><dd>${p.type}</dd><dt>YEAR</dt><dd>${p.year||"To be confirmed"}</dd><dt>ROLE</dt><dd>${p.role||"To be confirmed"}</dd></dl></aside></div></section>`;}
+else if(route.startsWith('work/')){const p=work.find(p=>p.id===route.split('/')[1]);if(!p){location.hash='films';return;}app.innerHTML=`<section class="section"><a class="text-link" href="#${p.category}">← BACK TO ${p.category.toUpperCase()}</a><div class="detail" style="margin-top:30px"><div>${p.video?`<video class="detail-image" controls playsinline preload="metadata" ${p.image.endsWith(".jpg")?`poster="${p.image}"`:""} aria-label="${p.title}"><source src="${p.video}" type="video/mp4">Your browser does not support embedded video. <a href="${p.video}">Download the film</a>.</video>`:`<img class="detail-image" src="${p.image}" alt="${p.title} cover">`}<h2>${p.title}</h2><div class="eyebrow">${p.type}</div><p>${p.description||"The story behind this project is coming soon. This page will feature the finished film, behind-the-scenes stills, and details about my role in the production."}</p>${(p.details||[]).map(([title,text])=>`<section class="project-section"><h3>${title}</h3><p>${text}</p></section>`).join('')}${p.video?`<p><a class="text-link" href="${p.video}" download>DOWNLOAD THE FILM ↓</a></p>`:p.description?'<p class="draft-note">Video and film stills will be added here.</p>':note}</div><aside><img src="${p.image}" alt="Project image"><dl><dt>PROJECT</dt><dd>${p.title}</dd><dt>FORMAT</dt><dd>${p.type}</dd><dt>YEAR</dt><dd>${p.year||"To be confirmed"}</dd><dt>ROLE</dt><dd>${p.role||"Details coming soon"}</dd></dl></aside></div></section>`;}
 else{app.innerHTML=heading('Out of frame.','This page does not exist.')+'<section class="section"><a class="text-link" href="#home">BACK HOME ↗</a></section>';}
 document.title=`${route==='home'?'Films & Photography':route.startsWith('work/')?(work.find(p=>p.id===route.split('/')[1])?.title||'Project'):route[0].toUpperCase()+route.slice(1)} — Odin James`;window.scrollTo(0,0);}
 function renderPhotos(filter){document.querySelector('#photos').innerHTML=photos.map((p,i)=>filter==='All'||p.category===filter?`<button class="photo" data-photo="${i}" aria-label="View ${p.title}"><img src="${p.src}" alt="${p.title}" loading="lazy"><span>${p.title} ↗</span></button>`:'').join('');}

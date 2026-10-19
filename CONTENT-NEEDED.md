@@ -12,3 +12,5 @@ Please supply:
 
 Suggested filenames: ukm-cover.jpg, ukm-01.jpg, gym-cover.jpg, gym-part-2-cover.jpg, johannes-01.jpg, blime-01.jpg, respawn-01.jpg.
 
+
+Production-log update: Johannes Groth and UKM descriptions expanded; Kulturnatt added. FOMOphone restored with video and cover as the first film (2025). The Gym Episode 1 is 2025; all other current projects are 2026. Gym films are described as early work following FOMOphone.
