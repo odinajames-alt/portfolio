@@ -88,17 +88,45 @@ const work=[
     "image": "assets/blime.jpg",
     "category": "projects",
     "year": "2026",
-    "description": "The final Borg videregående skole BliME video is available to watch on NRK.",
+    "description": "We were tasked with filming Borg videregående skole’s contribution to BliME. The school’s adapted education department approached media students to help film and edit its annual dance video, continuing a tradition that meant a great deal to both students and staff. The aim was to capture their energy, participation, and the small golden moments that made the video personal.",
     "externalUrl": "https://tv.nrk.no/serie/blime-2026-finn-din-skole/sesong/2026/episode/IBOT00002926",
-    "externalLabel": "WATCH BORG VGS ON NRK ↗"
+    "externalLabel": "WATCH BORG VGS ON NRK ↗",
+    "details": [
+      [
+        "The brief",
+        "The department wanted a finished video that communicated BliME’s message through the students’ enthusiasm and shared experience. Filming was planned across a couple of days in early September, ahead of BliME day on 18 September."
+      ],
+      [
+        "Capturing the moments",
+        "The emphasis was on seeing the people behind the dance: the spontaneous moments, expressions, and interactions that made the department’s contribution its own. Students and staff were involved throughout."
+      ],
+      [
+        "The finished video",
+        "Borg’s BliME video is available on NRK. Use the NRK link on this page to watch the final result."
+      ]
+    ]
   },
   {
     "id": "respawn",
     "title": "Respawn Østfold",
     "type": "Livestream production",
-    "image": "assets/cover-needed.svg",
+    "image": "assets/respawn-stream.png",
     "category": "projects",
-    "year": "2026"
+    "year": "2026",
+    "role": "Producer · Assistant director · Technical support",
+    "description": "I worked as producer, assistant director, and technical support on a Respawn Østfold livestream on Twitch. My contribution combined production responsibilities, support for the direction of the broadcast, and technical help during the live production.",
+    "details": [
+      [
+        "Working live",
+        "This project brought together my interests in production, teamwork, and the technical side of broadcasting. I worked across several roles to support the stream as it happened."
+      ],
+      [
+        "Stream screenshot and clips",
+        "The image above is a screenshot from the broadcast. The full livestream was not saved, but you can visit Respawn Østfold’s Twitch clips page to explore the available clips."
+      ]
+    ],
+    "externalUrl": "https://www.twitch.tv/respawnostfold/clips?range=all",
+    "externalLabel": "VISIT RESPAWN ØSTFOLD’S TWITCH CLIPS ↗"
   },
   {
     "id": "kulturnatt",
@@ -159,4 +187,5 @@ function toggleContact(button){
 }
 app.addEventListener('click',e=>{const contact=e.target.closest('[data-reveal-contact]');if(contact)toggleContact(contact);const photo=e.target.closest('[data-photo]');if(photo)showPhoto(Number(photo.dataset.photo));const filter=e.target.closest('[data-filter]');if(filter){document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===filter);b.setAttribute('aria-pressed',String(b===filter));});renderPhotos(filter.dataset.filter);}});
 viewer.querySelector('.close').onclick=()=>viewer.close();viewer.querySelector('.next').onclick=()=>showPhoto(current+1);viewer.querySelector('.previous').onclick=()=>showPhoto(current-1);viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close();});document.addEventListener('keydown',e=>{if(viewer.open){if(e.key==='ArrowRight')showPhoto(current+1);if(e.key==='ArrowLeft')showPhoto(current-1);}});document.querySelector('.menu').onclick=()=>{const open=document.querySelector('nav').classList.toggle('open');document.querySelector('.menu').setAttribute('aria-expanded',String(open));};document.querySelector('#year').textContent=new Date().getFullYear();window.addEventListener('hashchange',render);render();
+
 
