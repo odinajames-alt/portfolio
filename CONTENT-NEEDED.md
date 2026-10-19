@@ -3,7 +3,7 @@
 Already recovered: camera hero, portrait, four concert photos, four production collages, public email/phone, Sarpsborg location, UKM story and The Gym origin story.
 
 Please supply:
-- UKM video added. Still needed: a UKM landscape cover and 2–4 stills. The Gym and The Gym Part 2 need covers, stills, and video files or links.
+- UKM video added. Still needed: a UKM landscape cover and 2–4 stills. The Gym episodes 1 and 2 now include playable videos, extracted cover frames, and confirmed production roles. Additional behind-the-scenes stills are welcome.
 - Johannes Groth, BliME, Respawn: original landscape production pictures; confirm which Glenghuset pictures belong to Johannes Groth.
 - 6–12 street, landscape or people photographs if those categories should be included.
 - Clean originals of the four production collages, if available.
