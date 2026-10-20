@@ -61,7 +61,7 @@ const work=[
     "id": "johannes",
     "title": "Johannes Groth Concert",
     "type": "Live production",
-    "image": "assets/glenghuset.jpg",
+    "image": "assets/johannes-camera.png",
     "category": "projects",
     "year": "2026",
     "role": "Camera operator · Left-side camera",
@@ -85,7 +85,7 @@ const work=[
     "id": "blime",
     "title": "BliME-videoen",
     "type": "School project",
-    "image": "assets/blime.jpg",
+    "image": "assets/blime-camera.png",
     "category": "projects",
     "year": "2026",
     "description": "We were tasked with filming Borg videregående skole’s contribution to BliME. The school’s adapted education department approached media students to help film and edit its annual dance video, continuing a tradition that meant a great deal to both students and staff. The aim was to capture their energy, participation, and the small golden moments that made the video personal.",
@@ -132,7 +132,7 @@ const work=[
     "id": "kulturnatt",
     "title": "Kulturnatt Fredrikstad",
     "type": "Event photography",
-    "image": "assets/kulturnatt.jpg",
+    "image": "assets/kulturnatt-stage.png",
     "category": "projects",
     "year": "2026",
     "role": "Photographer · Litteraturhuset",
@@ -149,6 +149,30 @@ const work=[
       [
         "What I learned",
         "The assignment gave me experience photographing a real event for a client. I developed my timing and camera technique, and learned to plan coverage and priorities more carefully while staying ready for unexpected moments."
+      ]
+    ]
+  },
+  {
+    "id": "barneopera",
+    "title": "Sarpsborg Scene – Barneopera",
+    "type": "Multicamera production",
+    "image": "assets/barneopera-mixer.png",
+    "category": "projects",
+    "year": "2026",
+    "role": "Vision mixer · Bildemiks",
+    "description": "I was the vision mixer for a multicamera production of Karianna og Dragen, a 30-minute children’s opera at Sarpsborg Scene on 9 September 2026. Following the director’s cues, I operated the vision mixer to switch between cameras and put the requested camera on the programme output at the right moment.",
+    "details": [
+      [
+        "The production",
+        "The production involved seven musicians, three musical performers/singers, and a singer-conductor. The organisers approached media students about documenting the performance as a multicamera project."
+      ],
+      [
+        "My responsibility",
+        "My role was bildemiks: the director decided which camera should be shown, and I pressed the corresponding buttons on the vision mixer to make the switch happen. I was responsible for carrying out those camera changes during the performance."
+      ],
+      [
+        "Working with the director",
+        "The role depended on listening closely, staying focused, and responding to the director’s instructions at the right time so that the chosen camera appeared on screen."
       ]
     ]
   }
