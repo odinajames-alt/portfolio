@@ -198,7 +198,148 @@ const work=[
     ]
   }
 ];
-const photos=[{"src": "assets/concert-red.jpg", "title": "In the red light", "category": "Live"}, {"src": "assets/concert-blue.jpg", "title": "Between songs", "category": "Live"}, {"src": "assets/concert-haze.jpg", "title": "Through the haze", "category": "Live"}, {"src": "assets/concert-light.jpg", "title": "Into the light", "category": "Live"}];
+const photos=[
+  {
+    "src": "assets/concert-red.jpg",
+    "title": "In the red light",
+    "category": "Live",
+    "width": 2048,
+    "height": 1365
+  },
+  {
+    "src": "assets/concert-blue.jpg",
+    "title": "Between songs",
+    "category": "Live",
+    "width": 2048,
+    "height": 1232
+  },
+  {
+    "src": "assets/concert-haze.jpg",
+    "title": "Through the haze",
+    "category": "Live",
+    "width": 2048,
+    "height": 1536
+  },
+  {
+    "src": "assets/concert-light.jpg",
+    "title": "Into the light",
+    "category": "Live",
+    "width": 2048,
+    "height": 1536
+  },
+  {
+    "src": "assets/kulturnatt-img_0989.webp",
+    "title": "Green stage light",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  },
+  {
+    "src": "assets/kulturnatt-img_1328.webp",
+    "title": "Learning at the sewing table",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  },
+  {
+    "src": "assets/kulturnatt-img_0809.webp",
+    "title": "Dance in violet light",
+    "category": "Kulturnatt",
+    "width": 1299,
+    "height": 2000
+  },
+  {
+    "src": "assets/kulturnatt-img_1345.webp",
+    "title": "Colour on the water",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1334
+  },
+  {
+    "src": "assets/kulturnatt-img_1187.webp",
+    "title": "Hands in the air",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  },
+  {
+    "src": "assets/kulturnatt-img_0964.webp",
+    "title": "The drawing workshop",
+    "category": "Kulturnatt",
+    "width": 1500,
+    "height": 2000
+  },
+  {
+    "src": "assets/kulturnatt-img_1062.webp",
+    "title": "Football meets dance",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1086
+  },
+  {
+    "src": "assets/kulturnatt-img_1336.webp",
+    "title": "Warm light after dusk",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1200
+  },
+  {
+    "src": "assets/kulturnatt-img_0972.webp",
+    "title": "Behind the drums",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  },
+  {
+    "src": "assets/kulturnatt-img_1049.webp",
+    "title": "Making a mark",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  },
+  {
+    "src": "assets/kulturnatt-img_0888.webp",
+    "title": "Spoken word, blue light",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  },
+  {
+    "src": "assets/kulturnatt-img_1006.webp",
+    "title": "A moment on guitar",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  },
+  {
+    "src": "assets/kulturnatt-img_0951.webp",
+    "title": "Manga and characters",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1729
+  },
+  {
+    "src": "assets/kulturnatt-img_1264.webp",
+    "title": "At the front of the crowd",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  },
+  {
+    "src": "assets/kulturnatt-img_1020.webp",
+    "title": "Young voices on stage",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  },
+  {
+    "src": "assets/kulturnatt-img_1350.webp",
+    "title": "Light through the mist",
+    "category": "Kulturnatt",
+    "width": 2000,
+    "height": 1500
+  }
+];
 let motionEnabled=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 try{const savedMotion=localStorage.getItem('odin-motion');if(savedMotion!==null)motionEnabled=savedMotion==='on';}catch{}
 let revealObserver;
@@ -220,7 +361,7 @@ function chrome(){
 }
 const card=(p,i)=>`<a class="card ${p.category==='films'?'film-card':''}" href="#work/${p.id}"><div class="image-wrap"><img src="${p.image}" alt="${t('coverAlt',{title:p.title})}" loading="lazy">${p.category==='films'?'<span class="film-play" aria-hidden="true">▶</span>':''}</div><div class="card-head"><div><h3>${p.title}</h3><small>${p.type}</small></div><span class="number">${String(i+1).padStart(2,'0')}</span></div></a>`;
 const heading=(title,description)=>`<div class="page-heading"><div class="eyebrow">${t('portfolio')}</div><h2>${title}</h2><p>${description}</p></div>`;
-const photoButton=i=>`<button class="photo" data-photo="${i}" aria-label="${t('view',{title:photoTitle(i)})}"><img src="${photos[i].src}" alt="${photoTitle(i)}" loading="lazy"><span>${photoTitle(i)} ↗</span></button>`;
+const photoButton=i=>`<button class="photo" data-photo="${i}" aria-label="${t('view',{title:photoTitle(i)})}"><img src="${photos[i].src}" alt="${photoTitle(i)}" width="${photos[i].width}" height="${photos[i].height}" loading="lazy" decoding="async"><span>${photoTitle(i)} ↗</span></button>`;
 function portraitPanel(){return `<section class="section editorial-portrait"><div class="portrait-frame"><img src="assets/odin-editorial-portrait.png" alt="${t('editorialAlt')}" loading="lazy"><span class="hand">${t('portraitCaption')}</span></div><div><div class="eyebrow">${t('portraitEyebrow')}</div><h2>${t('portraitHeading')}</h2><p>${t('portraitText')}</p><a class="text-link" href="#about">${t('aboutMe')} ↗</a></div></section>`;}
 function render(){
  chrome();const route=location.hash.slice(1)||'home';const projects=work.map(localized);
