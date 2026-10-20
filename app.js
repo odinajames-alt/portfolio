@@ -58,6 +58,27 @@ const work=[
     "description": "FOMOphone was the very first film I ever made. I had only three days to create an advertisement based on a Helsenorge brief, showing how people can become addicted to their phones. It is a rough first attempt, included here as the starting point of my filmmaking journey and a contrast with what I can do today."
   },
   {
+    "id": "text-from-the-future",
+    "title": "Text from the Future",
+    "type": "Short film",
+    "image": "assets/text-from-the-future-cover.jpg",
+    "video": "assets/text-from-the-future.mp4",
+    "category": "films",
+    "year": "2026",
+    "role": "Director · Producer · Screenwriter · Camera · Cinematography · Editor · All production roles except acting",
+    "description": "Text from the Future grew from a film idea my mum had held onto for many years. When I realised I had the ability to produce it and make that idea real, I decided to do it.",
+    "details": [
+      [
+        "My role",
+        "I handled every production role except acting: directing, producing, writing the script, camera work, cinematography, editing, and everything else needed to bring the film together. The original idea came from my mum."
+      ],
+      [
+        "Looking back",
+        "This is the film I am least proud of making. I had only two hours to record everything, and that pressure shows in the performances and the direction. I am not happy with the media production side either; the whole process felt rushed. I include that context here because it is part of an honest account of the work."
+      ]
+    ]
+  },
+  {
     "id": "johannes",
     "title": "Johannes Groth Concert",
     "type": "Live production",
