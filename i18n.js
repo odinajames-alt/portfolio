@@ -37,3 +37,6 @@ Object.assign(messages.en,{"photo4": "Green stage light", "photo5": "Learning at
 Object.assign(messages.nb,{"photo4": "Grønt scenelys", "photo5": "Læring ved symaskinen", "photo6": "Dans i fiolett lys", "photo7": "Farger i vannet", "photo8": "Hender i været", "photo9": "Tegneverkstedet", "photo10": "Fotball møter dans", "photo11": "Varmt lys i skumringen", "photo12": "Bak trommene", "photo13": "Setter spor", "photo14": "Slampoesi i blått lys", "photo15": "Et øyeblikk med gitaren", "photo16": "Manga og karakterer", "photo17": "Foran i publikum", "photo18": "Unge stemmer på scenen", "photo19": "Lys gjennom tåken", "photosIntro": "Fra scenen til gata. Musikk, mennesker, verksteder og Kulturnatt etter mørkets frembrudd."});
 
 Object.assign(projectNb.ukm,{role:'Regi · Kamera · Foto · Klipp · Produksjonskoordinering',projectImageAlt:'Collage fra UKM-produksjonen med klippetidslinje, planlegging av opptakssteder og St. Croix',projectImageCaption:'Fra planlegging av opptakssteder til ferdig klipp: et innblikk i arbeidet bak UKMs introduksjonsfilm.'});
+
+messages.en.watchFilm='WATCH THE FILM ↗';
+messages.nb.watchFilm='SE FILMEN ↗';
