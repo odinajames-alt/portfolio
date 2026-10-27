@@ -85,6 +85,16 @@ const work=[
     ]
   },
   {
+    "id": "vaer-med-pa-turen",
+    "title": "Vær med på turen",
+    "type": "Advertisement",
+    "image": "assets/vaer-med-pa-turen-cover.jpg",
+    "video": "assets/vaer-med-pa-turen.mp4",
+    "category": "films",
+    "year": "2026",
+    "description": "I had only two hours to make an advertisement showing a more environmentally friendly way to travel. We decided to contrast the stress of driving with the fun of walking, showing walking as an enjoyable alternative."
+  },
+  {
     "id": "johannes",
     "title": "Johannes Groth Concert",
     "type": "Live production",
