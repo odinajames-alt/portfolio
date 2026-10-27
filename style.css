@@ -36,3 +36,5 @@ html[data-motion="off"] *,html[data-motion="off"] *:before,html[data-motion="off
 .photo img{height:auto}
 .project-log-image{margin:35px 0}.project-log-image img{display:block;width:100%;height:auto;border:1px solid #ffffff25}.project-log-image figcaption{font-size:12px;line-height:1.8;color:var(--muted);margin-top:12px}
 .watch-film-link{display:inline-block;background:var(--yellow);color:var(--ink);padding:14px 20px;font-size:12px;font-weight:600;letter-spacing:1px;border:1px solid var(--yellow);transition:translate .25s,background .25s}.watch-film-link:hover{translate:4px 0;background:var(--paper)}
+
+.cv-background{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:10%;margin-top:35px}@media(max-width:750px){.cv-background{grid-template-columns:1fr;gap:10px}}

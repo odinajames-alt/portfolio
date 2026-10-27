@@ -440,6 +440,5 @@ function setupMotion(){
 }
 
 function cvPanel(){
- const experience=[['Blime','blime'],['Johannes','johannes'],['Respawn','respawn'],['Service',null]];
- return `<section class="cv-panel"><div class="section-top"><div><div class="eyebrow">${t('cvEyebrow')}</div><h2>${t('cvHeading')}</h2><p>${t('cvIntro')}</p></div></div><div class="cv-layout"><div><h3 class="cv-label">${t('cvExperience')}</h3><div class="cv-timeline">${experience.map(([key,id])=>`<article class="cv-entry"><span class="cv-date">${t('cv'+key+'Date')}</span><h3>${t('cv'+key+'Role')}</h3><div class="cv-place">${t('cv'+key+'Place')}</div><p>${t('cv'+key+'Text')}</p>${id?`<a class="text-link" href="#work/${id}">${t('cvProject')}</a>`:''}</article>`).join('')}</div></div><aside class="cv-sidebar"><section><h3 class="cv-label">${t('cvEducation')}</h3><h4>${t('cvStudy')}</h4><p class="cv-place">${t('cvSchool')}</p><p>${t('cvStudyText')}</p></section><section><h3 class="cv-label">${t('cvLanguages')}</h3><p>${t('cvEnglish')}</p><p>${t('cvNorwegian')}</p></section></aside></div></section>`;
+ return `<section class="cv-panel"><div class="section-top"><div><div class="eyebrow">${t('cvEyebrow')}</div><h2>${t('cvHeading')}</h2><p>${t('cvIntro')}</p></div></div><div class="cv-sidebar cv-background"><section><h3 class="cv-label">${t('cvEducation')}</h3><h4>${t('cvStudy')}</h4><p class="cv-place">${t('cvSchool')}</p><p>${t('cvStudyText')}</p></section><section><h3 class="cv-label">${t('cvLanguages')}</h3><p>${t('cvEnglish')}</p><p>${t('cvNorwegian')}</p></section></div></section>`;
 }
