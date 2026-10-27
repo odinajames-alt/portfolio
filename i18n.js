@@ -46,4 +46,4 @@ projectNb['ukm-festival-multicamera']={title:'UKM-festivalen – flerkameraprodu
 Object.assign(messages.en,{cvEyebrow:'Education & languages',cvIntro:'My studies and the languages I use.'});
 Object.assign(messages.nb,{cvEyebrow:'Utdanning og språk',cvIntro:'Utdanningen min og språkene jeg bruker.'});
 
-projectNb['vaer-med-pa-turen']={"type": "Reklamefilm", "description": "Jeg hadde bare to timer på å lage en reklamefilm som viste en mer miljøvennlig måte å reise på. Vi valgte å sette stresset ved å kjøre bil opp mot gleden ved å gå, og vise at det å gå kan være et morsomt alternativ."};
+projectNb['vaer-med-pa-turen']={"type": "Reklamefilm", "role": "Regissør · Produsent · Skuespiller", "description": "Jeg hadde bare to timer på å lage en reklamefilm som viste en mer miljøvennlig måte å reise på. Vi valgte å sette stresset ved å kjøre bil opp mot gleden ved å gå, og vise at det å gå kan være et morsomt alternativ."};

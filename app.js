@@ -86,6 +86,7 @@ const work=[
   },
   {
     "id": "vaer-med-pa-turen",
+    "role": "Director · Producer · Actor",
     "title": "Vær med på turen",
     "type": "Advertisement",
     "image": "assets/vaer-med-pa-turen-cover.jpg",
