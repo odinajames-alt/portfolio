@@ -202,6 +202,33 @@ const work=[
         "The role depended on listening closely, staying focused, and responding to the director’s instructions at the right time so that the chosen camera appeared on screen."
       ]
     ]
+  },
+  {
+    "id": "ukm-festival-multicamera",
+    "title": "UKM Festival – Multicamera Production",
+    "type": "Live production",
+    "category": "projects",
+    "year": "2026",
+    "role": "Camera operator · Rear close-up camera",
+    "image": "assets/ukm-festival-camera-setup.png",
+    "projectImage": "assets/ukm-festival-at-camera.png",
+    "projectImageAlt": "Odin James at the rear camera position during UKM Festival",
+    "projectImageCaption": "At the back of the venue, alongside the wide-shot camera.",
+    "description": "I worked as a camera operator in the multicamera production for UKM Festival. I was stationed at the back of the venue, next to the camera providing the wide master shot. My camera was used for close-ups from the rear, giving the production tighter shots alongside the wider view.",
+    "details": [
+      [
+        "Technical setup",
+        "The production also tested my media technology skills. I needed to connect multiple cables and understand what each connection did. Working with the setup gave me practical experience with the technical side of a multicamera production."
+      ],
+      [
+        "Moving between venues",
+        "The production moved from St. Croix to Blå Grotte. I planned ahead for that change of venue and thought through what needed to happen as we moved the production and prepared for the next location."
+      ],
+      [
+        "What I learned",
+        "This was a valuable learning experience in camera work, cabling, and planning. It helped me connect my role behind the camera with the equipment and preparation needed to make a multicamera production work."
+      ]
+    ]
   }
 ];
 const photos=[
@@ -380,7 +407,7 @@ function render(){
  else if(route==='contact')app.innerHTML=`<section class="section contact-page"><div class="eyebrow">${t('haveStory')}</div><h2>${t('create')}</h2><p>${t('contactIntro')}</p><div class="contact-gate"><button type="button" class="contact-reveal" data-reveal-contact aria-expanded="false" aria-controls="contact-details">${t('reveal')}</button><div id="contact-details" class="contact-items" hidden></div></div><p class="draft-note">${t('based')}</p></section>`;
  else if(route.startsWith('work/')){
   const p=projects.find(p=>p.id===route.split('/')[1]);if(!p){location.hash='films';return;}
-  app.innerHTML=`<section class="section"><a class="text-link" href="#${p.category}">${t(p.category==='films'?'backFilms':'backProjects')}</a><div class="detail" style="margin-top:30px"><div>${p.video?`<video class="detail-image" controls playsinline preload="metadata" poster="${p.image}" aria-label="${p.title}"><source src="${p.video}" type="video/mp4">${t('videoUnsupported')} <a href="${p.video}">${t('downloadFallback')}</a>.</video>`:`<img class="detail-image" src="${p.image}" alt="${t('coverAlt',{title:p.title})}">`}<h2>${p.title}</h2><div class="eyebrow">${p.type}</div><p>${p.description||t('coming')}</p>${p.filmRoute?`<p><a class="watch-film-link" href="#${p.filmRoute}">${t('watchFilm')}</a></p>`:''}${p.externalUrl?`<p><a class="text-link" href="${p.externalUrl}" target="_blank" rel="noopener noreferrer">${p.externalLabel}</a></p>`:''}${(p.details||[]).map(([title,text])=>`<section class="project-section"><h3>${title}</h3><p>${text}</p></section>`).join('')}${p.projectImage?`<figure class="project-log-image"><img src="${p.projectImage}" alt="${p.projectImageAlt}" loading="lazy"><figcaption>${p.projectImageCaption}</figcaption></figure>`:''}${p.video?`<p><a class="text-link" href="${p.video}" download>${t('download')}</a></p>`:p.description&&!p.externalUrl&&!p.filmRoute?`<p class="draft-note">${t('stillsComing')}</p>`:''}</div><aside><img src="${p.image}" alt="${t('projectAlt',{title:p.title})}"><dl>${[['project',p.title],['format',p.type],['year',p.year||t('confirm')],['role',p.role||t('detailsComing')]].map(([key,value])=>`<dt>${t(key)}</dt><dd>${value}</dd>`).join('')}</dl></aside></div></section>`;
+  app.innerHTML=`<section class="section"><a class="text-link" href="#${p.category}">${t(p.category==='films'?'backFilms':'backProjects')}</a><div class="detail" style="margin-top:30px"><div>${p.video?`<video class="detail-image" controls playsinline preload="metadata" poster="${p.image}" aria-label="${p.title}"><source src="${p.video}" type="video/mp4">${t('videoUnsupported')} <a href="${p.video}">${t('downloadFallback')}</a>.</video>`:`<img class="detail-image" src="${p.image}" alt="${t('coverAlt',{title:p.title})}">`}<h2>${p.title}</h2><div class="eyebrow">${p.type}</div><p>${p.description||t('coming')}</p>${p.filmRoute?`<p><a class="watch-film-link" href="#${p.filmRoute}">${t('watchFilm')}</a></p>`:''}${p.externalUrl?`<p><a class="text-link" href="${p.externalUrl}" target="_blank" rel="noopener noreferrer">${p.externalLabel}</a></p>`:''}${(p.details||[]).map(([title,text])=>`<section class="project-section"><h3>${title}</h3><p>${text}</p></section>`).join('')}${p.projectImage?`<figure class="project-log-image"><img src="${p.projectImage}" alt="${p.projectImageAlt}" loading="lazy"><figcaption>${p.projectImageCaption}</figcaption></figure>`:''}${p.video?`<p><a class="text-link" href="${p.video}" download>${t('download')}</a></p>`:p.description&&!p.externalUrl&&!p.filmRoute&&!p.projectImage?`<p class="draft-note">${t('stillsComing')}</p>`:''}</div><aside><img src="${p.image}" alt="${t('projectAlt',{title:p.title})}"><dl>${[['project',p.title],['format',p.type],['year',p.year||t('confirm')],['role',p.role||t('detailsComing')]].map(([key,value])=>`<dt>${t(key)}</dt><dd>${value}</dd>`).join('')}</dl></aside></div></section>`;
  }else app.innerHTML=heading(t('notFound'),t('missing'))+`<section class="section"><a class="text-link" href="#home">${t('backHome')}</a></section>`;
  document.title=`${route==='home'?t('homeTitle'):route.startsWith('work/')?(projects.find(p=>p.id===route.split('/')[1])?.title||t('project')):messages[language][route]||t('notFound')} — Odin James`;
  if(viewer.open)showPhoto(current);window.scrollTo(0,0);setupMotion();
