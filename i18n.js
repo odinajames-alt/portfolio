@@ -52,8 +52,4 @@ Object.assign(messages.en,{"photo20": "Through the warm passage", "photo21": "Be
 
 Object.assign(messages.nb,{"photo20": "Gjennom den varme passasjen", "photo21": "Mellom blå vegger", "photo22": "Under gatelyset", "photo23": "Blåtimen", "photo24": "Ett steg av gangen", "photo25": "Undring i skogen", "photo26": "En gate av gylne lys", "photo27": "Rundt i farten", "photo28": "En lysning i det grønne", "photo29": "Når gata gløder", "featuredPhotos": "I fokus", "morePhotos": "Flere fotografier", "photosIntro": "Gateliv, portretter, natur og øyeblikk på scenen."});
 
-Object.assign(messages.en,{showCv:'Show CV',hideCv:'Hide CV',openCv:'Open PDF',cvDocument:'Odin James — CV'});
-Object.assign(messages.nb,{showCv:'Vis CV',hideCv:'Skjul CV',openCv:'Åpne PDF',cvDocument:'Odin James — CV'});
 
-messages.en.cvPage='Odin James CV — page {page} of 2';
-messages.nb.cvPage='Odin James CV — side {page} av 2';
