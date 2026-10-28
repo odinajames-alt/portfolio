@@ -385,70 +385,70 @@ const photos=[
   },
   {
     "src": "assets/codex-clipboard-3e74cd87-c554-43dc-affd-c5313dbc4887.jpg",
-    "title": "IMG_9706",
+    "title": "Through the warm passage",
     "width": 1352,
     "height": 1206,
     "featured": true
   },
   {
     "src": "assets/codex-clipboard-5a226c1d-b30a-490a-9894-e5366ff40573.jpg",
-    "title": "Composition 1",
+    "title": "Between blue walls",
     "width": 1365,
     "height": 2048,
     "featured": true
   },
   {
     "src": "assets/codex-clipboard-748551b1-3a8e-456f-9907-86386d65d8ee.jpg",
-    "title": "ma og dog",
+    "title": "Under the streetlight",
     "width": 2048,
     "height": 1698,
     "featured": true
   },
   {
     "src": "assets/codex-clipboard-817d6845-ebcc-4be3-958e-6b16e5795857.jpg",
-    "title": "IMG_9809",
+    "title": "The blue hour",
     "width": 2048,
     "height": 1365,
     "featured": true
   },
   {
     "src": "assets/codex-clipboard-caac5db0-3964-466e-897d-fcb790e1b0e7.jpg",
-    "title": "wlkign",
+    "title": "One step at a time",
     "width": 2048,
     "height": 1215,
     "featured": true
   },
   {
     "src": "assets/codex-clipboard-0bebebe4-c9a8-466c-a9fe-4745f204c99a.jpg",
-    "title": "IMG_9965",
+    "title": "Wonder in the woods",
     "width": 2048,
     "height": 1365,
     "featured": true
   },
   {
     "src": "assets/codex-clipboard-e81ede44-206e-4d48-8f01-53ff8e1dfb37.jpg",
-    "title": "IMG_9799",
+    "title": "A street of golden lights",
     "width": 1436,
     "height": 1157,
     "featured": true
   },
   {
     "src": "assets/codex-clipboard-9ca7e099-5b22-4a96-afe5-9094c0d8dd01.jpg",
-    "title": "IMG_9843",
+    "title": "Around in a blur",
     "width": 1292,
     "height": 1173,
     "featured": true
   },
   {
     "src": "assets/codex-clipboard-5a24a5f7-3f15-4fce-983b-c34396462f23.jpg",
-    "title": "IMG_9935",
+    "title": "A clearing in the green",
     "width": 2048,
     "height": 1365,
     "featured": true
   },
   {
     "src": "assets/codex-clipboard-58840b43-2858-47f2-8d7a-20fa7d5e5c83.jpg",
-    "title": "IMG_9807",
+    "title": "When the street glows",
     "width": 1448,
     "height": 1365,
     "featured": true
@@ -481,7 +481,7 @@ const withProjectViews=items=>[...items,...items.filter(p=>p.alsoIn?.includes('p
 function render(){
  chrome();const route=location.hash.slice(1)||'home';const projects=withProjectViews(work.map(localized));
  document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('active',a.hash==='#'+(route.startsWith('work/')?(projects.find(p=>p.id===route.split('/')[1])?.category||'films'):route)));
- if(route==='home')app.innerHTML=`<section class="hero"><img src="assets/odin-filming.jpg" alt="${t('cameraAlt')}" fetchpriority="high"><div class="hero-scrap"><img src="assets/odin-studio.png" alt="${t('studioAlt')}"><span class="hand">${t('heroCaption')}</span></div><div class="hero-content"><div class="eyebrow">${t('heroEyebrow')}</div><h1>ODIN<span>JAMES.</span></h1></div><div class="hero-note hand">${t('heroNote')}</div><div class="hero-bottom"><a href="#films">${t('explore')}</a></div></section><div class="intro-strip"><p>${t('intro')}</p><span class="hand">${t('perspectives')}</span></div><div class="motion-ribbon" aria-hidden="true"><div>${Array.from({length:6},()=>`<span>${t('motionRibbon')}</span>`).join('')}</div></div><section class="section"><div class="section-top"><div><div class="eyebrow">${t('lens')}</div><h2>${t('selected')}</h2></div><a class="text-link" href="#projects">${t('allProjects')}</a></div><div class="grid">${['ukm','fomophone','gym-part-2'].map(id=>projects.find(p=>p.id===id)).map(card).join('')}</div></section><section class="section"><div class="section-top"><h2>${t('moments')}</h2><a class="text-link" href="#photography">${t('explorePhotos')}</a></div><div class="grid">${[1,2,3].map(photoButton).join('')}</div></section>${portraitPanel()}`;
+ if(route==='home')app.innerHTML=`<section class="hero"><img src="assets/odin-filming.jpg" alt="${t('cameraAlt')}" fetchpriority="high"><div class="hero-scrap"><img src="assets/odin-studio.png" alt="${t('studioAlt')}"><span class="hand">${t('heroCaption')}</span></div><div class="hero-content"><div class="eyebrow">${t('heroEyebrow')}</div><h1>ODIN<span>JAMES.</span></h1></div><div class="hero-note hand">${t('heroNote')}</div><div class="hero-bottom"><a href="#films">${t('explore')}</a></div></section><div class="intro-strip"><p>${t('intro')}</p><span class="hand">${t('perspectives')}</span></div><div class="motion-ribbon" aria-hidden="true"><div>${Array.from({length:6},()=>`<span>${t('motionRibbon')}</span>`).join('')}</div></div><section class="section"><div class="section-top"><div><div class="eyebrow">${t('lens')}</div><h2>${t('selected')}</h2></div><a class="text-link" href="#projects">${t('allProjects')}</a></div><div class="grid">${['ukm','fomophone','gym-part-2'].map(id=>projects.find(p=>p.id===id)).map(card).join('')}</div></section><section class="section"><div class="section-top"><h2>${t('moments')}</h2><a class="text-link" href="#photography">${t('explorePhotos')}</a></div><div class="grid">${[21,27,0].map(photoButton).join('')}</div></section>${portraitPanel()}`;
  else if(route==='films'||route==='projects')app.innerHTML=heading(t(route),t(route==='films'?'filmsIntro':'projectsIntro'))+`<section class="section page-grid"><div class="grid">${projects.filter(p=>p.category===route).map(card).join('')}</div></section>`;
  else if(route==='photography')app.innerHTML=heading(t('photography'),t('photosIntro'))+`<section class="section page-grid featured-photos"><div class="section-top"><h2>${t('featuredPhotos')}</h2></div><div class="photo-grid" id="photos">${photos.map((p,i)=>p.featured?photoButton(i):'').join('')}</div></section><section class="section page-grid"><div class="section-top"><h2>${t('morePhotos')}</h2></div><div class="photo-grid">${photos.map((p,i)=>!p.featured?photoButton(i):'').join('')}</div></section>`;
  else if(route==='about')app.innerHTML=`<section class="section"><div class="about-layout"><div><div class="eyebrow">${t('behindCamera')}</div><h2 style="color:var(--yellow)">${t('aboutMe')}</h2><p>${t('bio')}</p><p>${t('bioApproach')}</p><p>${t('bioGoals')}</p><a class="text-link" href="#contact">${t('makeSomething')}</a></div><div class="collage"><img src="assets/odin-casual.jpg" alt="${t('portraitAlt')}"><span class="hand">${t('closer')}</span></div></div><div class="skills">${[['01','filmmaking','ideaFrame'],['02','photography','peoplePlaces'],['03','liveProduction','asTheyHappen'],['04','skillEditing','skillEditingText'],['05','skillIdeas','skillIdeasText'],['06','skillTeamwork','skillTeamworkText']].map(([n,title,description])=>`<div><span class="hand">${n}</span><h3>${t(title)}</h3><p>${t(description)}</p></div>`).join('')}</div>${cvPanel()}</section>`;
