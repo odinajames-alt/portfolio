@@ -40,3 +40,6 @@ html[data-motion="off"] *,html[data-motion="off"] *:before,html[data-motion="off
 .cv-background{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:10%;margin-top:35px}@media(max-width:750px){.cv-background{grid-template-columns:1fr;gap:10px}}
 
 .featured-photos{background:linear-gradient(145deg,#efd04c0c,transparent 65%);border-top:1px solid #efd04c55;border-bottom:1px solid #efd04c33}.featured-photos .section-top h2{color:var(--yellow)}.featured-photos .photo{border:1px solid #efd04c55}
+
+/* Match homepage crops to the roundabout photograph; gallery originals stay full size. */
+.moments-grid .photo img{aspect-ratio:1292/1173;height:auto;object-fit:cover;object-position:center}.moments-grid .photo[data-photo="21"] img{object-position:50% 58%}
