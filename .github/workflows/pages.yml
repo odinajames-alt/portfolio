@@ -27,10 +27,10 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html style.css app.js i18n.js _site/
+          cp -r assets _site/
           node --check _site/app.js
           node --check _site/i18n.js
           node scripts/check-static.mjs _site
-          cp -r assets _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
