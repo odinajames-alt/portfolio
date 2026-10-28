@@ -96,6 +96,31 @@ const work=[
     "description": "I had only two hours to make an advertisement showing a more environmentally friendly way to travel. We decided to contrast the stress of driving with the fun of walking, showing walking as an enjoyable alternative."
   },
   {
+    "id": "haven-after",
+    "title": "Haven After",
+    "type": "Original film · In development",
+    "image": "assets/haven-after.jpg",
+    "category": "projects",
+    "year": "2026",
+    "role": "Original idea · Screenwriter · Director · Producer · Camera",
+    "inDevelopment": true,
+    "description": "Haven After is an original post-apocalyptic thriller based on my own idea. It follows a group living in a shelter, where survival, trust, and control begin to collide. I wrote the script and took on directing, producing, and camera work, handling almost every part of the production myself.",
+    "details": [
+      [
+        "Pausing to get it right",
+        "I paused production because there was not enough time to complete the film, and there were parts of the script I was unhappy with. Rather than rush it through, I decided to take time to work on the story again."
+      ],
+      [
+        "Rewriting the script",
+        "I am currently working on a complete script rewrite. The plan is to resume production soon, once the revised script is ready."
+      ],
+      [
+        "A more focused production",
+        "The rewrite moves the story mainly into a basement, keeping the tension within a smaller setting. I want to preserve the core of the original story while simplifying the production and giving the characters more purpose."
+      ]
+    ]
+  },
+  {
     "id": "johannes",
     "title": "Johannes Groth Concert",
     "type": "Live production",
@@ -488,7 +513,7 @@ function render(){
  else if(route==='contact')app.innerHTML=`<section class="section contact-page"><div class="eyebrow">${t('haveStory')}</div><h2>${t('create')}</h2><p>${t('contactIntro')}</p><div class="contact-gate"><button type="button" class="contact-reveal" data-reveal-contact aria-expanded="false" aria-controls="contact-details">${t('reveal')}</button><div id="contact-details" class="contact-items" hidden></div></div><p class="draft-note">${t('based')}</p></section>`;
  else if(route.startsWith('work/')){
   const p=projects.find(p=>p.id===route.split('/')[1]);if(!p){location.hash='films';return;}
-  app.innerHTML=`<section class="section"><a class="text-link" href="#${p.category}">${t(p.category==='films'?'backFilms':'backProjects')}</a><div class="detail" style="margin-top:30px"><div>${p.video?`<video class="detail-image" controls playsinline preload="metadata" poster="${p.image}" aria-label="${p.title}"><source src="${p.video}" type="video/mp4">${t('videoUnsupported')} <a href="${p.video}">${t('downloadFallback')}</a>.</video>`:`<img class="detail-image" src="${p.image}" alt="${t('coverAlt',{title:p.title})}">`}<h2>${p.title}</h2><div class="eyebrow">${p.type}</div><p>${p.description||t('coming')}</p>${p.filmRoute?`<p><a class="watch-film-link" href="#${p.filmRoute}">${t('watchFilm')}</a></p>`:''}${p.externalUrl?`<p><a class="text-link" href="${p.externalUrl}" target="_blank" rel="noopener noreferrer">${p.externalLabel}</a></p>`:''}${(p.details||[]).map(([title,text])=>`<section class="project-section"><h3>${title}</h3><p>${text}</p></section>`).join('')}${p.projectImage?`<figure class="project-log-image"><img src="${p.projectImage}" alt="${p.projectImageAlt}" loading="lazy"><figcaption>${p.projectImageCaption}</figcaption></figure>`:''}${p.video?`<p><a class="text-link" href="${p.video}" download>${t('download')}</a></p>`:p.description&&!p.externalUrl&&!p.filmRoute&&!p.projectImage?`<p class="draft-note">${t('stillsComing')}</p>`:''}</div><aside><img src="${p.image}" alt="${t('projectAlt',{title:p.title})}"><dl>${[['project',p.title],['format',p.type],['year',p.year||t('confirm')],['role',p.role||t('detailsComing')]].map(([key,value])=>`<dt>${t(key)}</dt><dd>${value}</dd>`).join('')}</dl></aside></div></section>`;
+  app.innerHTML=`<section class="section"><a class="text-link" href="#${p.category}">${t(p.category==='films'?'backFilms':'backProjects')}</a><div class="detail" style="margin-top:30px"><div>${p.video?`<video class="detail-image" controls playsinline preload="metadata" poster="${p.image}" aria-label="${p.title}"><source src="${p.video}" type="video/mp4">${t('videoUnsupported')} <a href="${p.video}">${t('downloadFallback')}</a>.</video>`:`<img class="detail-image" src="${p.image}" alt="${t('coverAlt',{title:p.title})}">`}<h2>${p.title}</h2><div class="eyebrow">${p.type}</div><p>${p.description||t('coming')}</p>${p.filmRoute?`<p><a class="watch-film-link" href="#${p.filmRoute}">${t('watchFilm')}</a></p>`:''}${p.externalUrl?`<p><a class="text-link" href="${p.externalUrl}" target="_blank" rel="noopener noreferrer">${p.externalLabel}</a></p>`:''}${(p.details||[]).map(([title,text])=>`<section class="project-section"><h3>${title}</h3><p>${text}</p></section>`).join('')}${p.projectImage?`<figure class="project-log-image"><img src="${p.projectImage}" alt="${p.projectImageAlt}" loading="lazy"><figcaption>${p.projectImageCaption}</figcaption></figure>`:''}${p.video?`<p><a class="text-link" href="${p.video}" download>${t('download')}</a></p>`:p.description&&!p.externalUrl&&!p.filmRoute&&!p.projectImage&&!p.inDevelopment?`<p class="draft-note">${t('stillsComing')}</p>`:''}</div><aside><img src="${p.image}" alt="${t('projectAlt',{title:p.title})}"><dl>${[['project',p.title],['format',p.type],['year',p.year||t('confirm')],['role',p.role||t('detailsComing')]].map(([key,value])=>`<dt>${t(key)}</dt><dd>${value}</dd>`).join('')}</dl></aside></div></section>`;
  }else app.innerHTML=heading(t('notFound'),t('missing'))+`<section class="section"><a class="text-link" href="#home">${t('backHome')}</a></section>`;
  document.title=`${route==='home'?t('homeTitle'):route.startsWith('work/')?(projects.find(p=>p.id===route.split('/')[1])?.title||t('project')):messages[language][route]||t('notFound')} — Odin James`;
  if(viewer.open)showPhoto(current);window.scrollTo(0,0);setupMotion();
