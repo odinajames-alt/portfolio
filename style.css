@@ -45,3 +45,5 @@ html[data-motion="off"] *,html[data-motion="off"] *:before,html[data-motion="off
 .moments-grid .photo img{aspect-ratio:1292/1173;height:auto;object-fit:cover;object-position:center}.moments-grid .photo[data-photo="21"] img{object-position:50% 58%}
 
 .cv-document{margin-top:36px}.cv-document summary{display:inline-block;cursor:pointer;list-style:none;border:1px solid var(--yellow);padding:14px 24px;color:var(--yellow);transition:background .25s,color .25s}.cv-document summary::-webkit-details-marker{display:none}.cv-document summary:hover{background:var(--yellow);color:var(--ink)}.cv-document summary:focus-visible{outline:2px solid var(--yellow);outline-offset:5px}.cv-hide,.cv-document[open] .cv-show{display:none}.cv-document[open] .cv-hide{display:inline}.cv-document-body{margin-top:24px}.cv-document iframe{display:block;width:100%;height:80vh;min-height:480px;border:1px solid #ffffff30;background:#edeae1}@media(max-width:750px){.cv-document iframe{height:70vh;min-height:400px}}
+
+.cv-pages{display:grid;gap:20px;max-width:950px;margin:auto}.cv-pages img{display:block;width:100%;height:auto;background:white;border:1px solid #ffffff30}

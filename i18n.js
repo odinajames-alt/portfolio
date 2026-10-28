@@ -54,3 +54,6 @@ Object.assign(messages.nb,{"photo20": "Gjennom den varme passasjen", "photo21": 
 
 Object.assign(messages.en,{showCv:'Show CV',hideCv:'Hide CV',openCv:'Open PDF',cvDocument:'Odin James — CV'});
 Object.assign(messages.nb,{showCv:'Vis CV',hideCv:'Skjul CV',openCv:'Åpne PDF',cvDocument:'Odin James — CV'});
+
+messages.en.cvPage='Odin James CV — page {page} of 2';
+messages.nb.cvPage='Odin James CV — side {page} av 2';
