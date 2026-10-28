@@ -51,3 +51,6 @@ projectNb['vaer-med-pa-turen']={"type": "Reklamefilm", "role": "Regissør · Pro
 Object.assign(messages.en,{"photo20": "Through the warm passage", "photo21": "Between blue walls", "photo22": "Under the streetlight", "photo23": "The blue hour", "photo24": "One step at a time", "photo25": "Wonder in the woods", "photo26": "A street of golden lights", "photo27": "Around in a blur", "photo28": "A clearing in the green", "photo29": "When the street glows", "featuredPhotos": "In the spotlight", "morePhotos": "More photographs", "photosIntro": "Street scenes, portraits, nature, and moments on stage."});
 
 Object.assign(messages.nb,{"photo20": "Gjennom den varme passasjen", "photo21": "Mellom blå vegger", "photo22": "Under gatelyset", "photo23": "Blåtimen", "photo24": "Ett steg av gangen", "photo25": "Undring i skogen", "photo26": "En gate av gylne lys", "photo27": "Rundt i farten", "photo28": "En lysning i det grønne", "photo29": "Når gata gløder", "featuredPhotos": "I fokus", "morePhotos": "Flere fotografier", "photosIntro": "Gateliv, portretter, natur og øyeblikk på scenen."});
+
+Object.assign(messages.en,{showCv:'Show CV',hideCv:'Hide CV',openCv:'Open PDF',cvDocument:'Odin James — CV'});
+Object.assign(messages.nb,{showCv:'Vis CV',hideCv:'Skjul CV',openCv:'Åpne PDF',cvDocument:'Odin James — CV'});

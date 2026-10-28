@@ -521,7 +521,7 @@ function setupMotion(){
 }
 
 function cvPanel(){
- return `<section class="cv-panel"><div class="section-top"><div><div class="eyebrow">${t('cvEyebrow')}</div><h2>${t('cvHeading')}</h2><p>${t('cvIntro')}</p></div></div><div class="cv-sidebar cv-background"><section><h3 class="cv-label">${t('cvEducation')}</h3><h4>${t('cvStudy')}</h4><p class="cv-place">${t('cvSchool')}</p><p>${t('cvStudyText')}</p></section><section><h3 class="cv-label">${t('cvLanguages')}</h3><p>${t('cvEnglish')}</p><p>${t('cvNorwegian')}</p></section></div></section>`;
+ return `<section class="cv-panel"><div class="section-top"><div><div class="eyebrow">${t('cvEyebrow')}</div><h2>${t('cvHeading')}</h2><p>${t('cvIntro')}</p></div></div><div class="cv-sidebar cv-background"><section><h3 class="cv-label">${t('cvEducation')}</h3><h4>${t('cvStudy')}</h4><p class="cv-place">${t('cvSchool')}</p><p>${t('cvStudyText')}</p></section><section><h3 class="cv-label">${t('cvLanguages')}</h3><p>${t('cvEnglish')}</p><p>${t('cvNorwegian')}</p></section></div><details class="cv-document"><summary><span class="cv-show">${t('showCv')}</span><span class="cv-hide">${t('hideCv')}</span><span aria-hidden="true"> ↗</span></summary><div class="cv-document-body"><p><a class="text-link" href="assets/Odin-James-15-09-2026.pdf" target="_blank" rel="noopener">${t('openCv')} ↗</a></p><iframe src="assets/Odin-James-15-09-2026.pdf" title="${t('cvDocument')}" loading="lazy"></iframe></div></details></section>`;
 }
 
 // Ease desktop wheel scrolling while preserving native touch and nested controls.
