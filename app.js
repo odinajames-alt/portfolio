@@ -151,7 +151,7 @@ const work=[
     "image": "assets/blime-camera.png",
     "category": "projects",
     "year": "2026",
-    "description": "We were tasked with filming Borg videregående skole’s contribution to BliME. The school’s adapted education department approached media students to help film and edit its annual dance video, continuing a tradition that meant a great deal to both students and staff. The aim was to capture their energy, participation, and the small golden moments that made the video personal.",
+    "description": "I worked as a camera operator on Borg videregående skole’s contribution to BliME. We were tasked with filming Borg videregående skole’s contribution to BliME. The school’s adapted education department approached media students to help film and edit its annual dance video, continuing a tradition that meant a great deal to both students and staff. The aim was to capture their energy, participation, and the small golden moments that made the video personal.",
     "externalUrl": "https://tv.nrk.no/serie/blime-2026-finn-din-skole/sesong/2026/episode/IBOT00002926",
     "externalLabel": "WATCH BORG VGS ON NRK ↗",
     "details": [
@@ -167,7 +167,8 @@ const work=[
         "The finished video",
         "Borg’s BliME video is available on NRK. Use the NRK link on this page to watch the final result."
       ]
-    ]
+    ],
+    "role": "Camera operator"
   },
   {
     "id": "respawn",
