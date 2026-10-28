@@ -38,3 +38,5 @@ html[data-motion="off"] *,html[data-motion="off"] *:before,html[data-motion="off
 .watch-film-link{display:inline-block;background:var(--yellow);color:var(--ink);padding:14px 20px;font-size:12px;font-weight:600;letter-spacing:1px;border:1px solid var(--yellow);transition:translate .25s,background .25s}.watch-film-link:hover{translate:4px 0;background:var(--paper)}
 
 .cv-background{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:10%;margin-top:35px}@media(max-width:750px){.cv-background{grid-template-columns:1fr;gap:10px}}
+
+.featured-photos{background:linear-gradient(145deg,#efd04c0c,transparent 65%);border-top:1px solid #efd04c55;border-bottom:1px solid #efd04c33}.featured-photos .section-top h2{color:var(--yellow)}.featured-photos .photo{border:1px solid #efd04c55}

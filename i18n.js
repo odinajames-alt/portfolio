@@ -47,3 +47,7 @@ Object.assign(messages.en,{cvEyebrow:'Education & languages',cvIntro:'My studies
 Object.assign(messages.nb,{cvEyebrow:'Utdanning og språk',cvIntro:'Utdanningen min og språkene jeg bruker.'});
 
 projectNb['vaer-med-pa-turen']={"type": "Reklamefilm", "role": "Regissør · Produsent · Skuespiller", "description": "Jeg hadde bare to timer på å lage en reklamefilm som viste en mer miljøvennlig måte å reise på. Vi valgte å sette stresset ved å kjøre bil opp mot gleden ved å gå, og vise at det å gå kan være et morsomt alternativ."};
+
+Object.assign(messages.en,{"photo20": "IMG_9706", "photo21": "Composition 1", "photo22": "ma og dog", "photo23": "IMG_9809", "photo24": "wlkign", "photo25": "IMG_9965", "photo26": "IMG_9799", "photo27": "IMG_9843", "photo28": "IMG_9935", "photo29": "IMG_9807", "featuredPhotos": "In the spotlight", "morePhotos": "More photographs", "photosIntro": "Street scenes, portraits, nature, and moments on stage."});
+
+Object.assign(messages.nb,{"photo20": "IMG_9706", "photo21": "Composition 1", "photo22": "ma og dog", "photo23": "IMG_9809", "photo24": "wlkign", "photo25": "IMG_9965", "photo26": "IMG_9799", "photo27": "IMG_9843", "photo28": "IMG_9935", "photo29": "IMG_9807", "featuredPhotos": "I fokus", "morePhotos": "Flere fotografier", "photosIntro": "Gateliv, portretter, natur og øyeblikk på scenen."});
