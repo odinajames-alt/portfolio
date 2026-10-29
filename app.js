@@ -275,7 +275,8 @@ const photos=[
     "title": "In the red light",
     "category": "Live",
     "width": 2048,
-    "height": 1365
+    "height": 1365,
+    "featured": true
   },
   {
     "src": "assets/concert-blue.jpg",
@@ -289,7 +290,8 @@ const photos=[
     "title": "Through the haze",
     "category": "Live",
     "width": 2048,
-    "height": 1536
+    "height": 1536,
+    "featured": true
   },
   {
     "src": "assets/concert-light.jpg",
@@ -414,8 +416,7 @@ const photos=[
     "src": "assets/codex-clipboard-3e74cd87-c554-43dc-affd-c5313dbc4887.jpg",
     "title": "Through the warm passage",
     "width": 1352,
-    "height": 1206,
-    "featured": true
+    "height": 1206
   },
   {
     "src": "assets/codex-clipboard-5a226c1d-b30a-490a-9894-e5366ff40573.jpg",
@@ -428,8 +429,7 @@ const photos=[
     "src": "assets/codex-clipboard-748551b1-3a8e-456f-9907-86386d65d8ee.jpg",
     "title": "Under the streetlight",
     "width": 2048,
-    "height": 1698,
-    "featured": true
+    "height": 1698
   },
   {
     "src": "assets/codex-clipboard-817d6845-ebcc-4be3-958e-6b16e5795857.jpg",
@@ -449,15 +449,13 @@ const photos=[
     "src": "assets/codex-clipboard-0bebebe4-c9a8-466c-a9fe-4745f204c99a.jpg",
     "title": "Wonder in the woods",
     "width": 2048,
-    "height": 1365,
-    "featured": true
+    "height": 1365
   },
   {
     "src": "assets/codex-clipboard-e81ede44-206e-4d48-8f01-53ff8e1dfb37.jpg",
     "title": "A street of golden lights",
     "width": 1436,
-    "height": 1157,
-    "featured": true
+    "height": 1157
   },
   {
     "src": "assets/codex-clipboard-9ca7e099-5b22-4a96-afe5-9094c0d8dd01.jpg",
@@ -470,15 +468,13 @@ const photos=[
     "src": "assets/codex-clipboard-5a24a5f7-3f15-4fce-983b-c34396462f23.jpg",
     "title": "A clearing in the green",
     "width": 2048,
-    "height": 1365,
-    "featured": true
+    "height": 1365
   },
   {
     "src": "assets/codex-clipboard-58840b43-2858-47f2-8d7a-20fa7d5e5c83.jpg",
     "title": "When the street glows",
     "width": 1448,
-    "height": 1365,
-    "featured": true
+    "height": 1365
   }
 ];
 let motionEnabled=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
