@@ -60,3 +60,5 @@ html.lenis{scroll-behavior:auto!important}
 @media(max-width:750px){.featured-photos .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 .companion-film{margin-top:40px;padding-top:25px;border-top:1px solid #ffffff25}.social-video{display:block;width:100%;max-width:400px;aspect-ratio:9/16;height:auto;background:#000}
+
+.mobile-project-meta{display:none}@media(max-width:750px){.mobile-project-meta{display:flex;align-items:baseline;gap:12px;margin:20px 0}.mobile-project-meta dt{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.mobile-project-meta dd{margin:0}}
