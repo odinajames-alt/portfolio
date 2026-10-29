@@ -63,9 +63,6 @@ html.lenis{scroll-behavior:auto!important}
 
 .mobile-project-meta{display:none}@media(max-width:750px){.mobile-project-meta{display:flex;align-items:baseline;gap:12px;margin:20px 0}.mobile-project-meta dt{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.mobile-project-meta dd{margin:0}}
 
-/* A hooked J stays readable at display size; retain the handwritten name. */
-@font-face{font-family:"Hero J";src:url("assets/fonts/hero-j-bold-italic.ttf") format("truetype");font-style:italic;font-weight:700;font-display:swap}
-.hero h1 .hero-j{display:inline-block;font-family:"Hero J",Arial,sans-serif;font-style:italic;font-weight:700;font-size:.84em;line-height:1;letter-spacing:0;padding-right:.025em}
 
 /* Reveal the name without clipping the J’s hook or italic overhang. */
 @keyframes hero-name-in{from{opacity:0;translate:-35px 0}to{opacity:1;translate:0 0}}
