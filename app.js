@@ -354,7 +354,8 @@ const photos=[
     "title": "Warm light after dusk",
     "category": "Kulturnatt",
     "width": 2000,
-    "height": 1200
+    "height": 1200,
+    "featured": true
   },
   {
     "src": "assets/kulturnatt-img_0972.webp",
@@ -429,7 +430,8 @@ const photos=[
     "src": "assets/codex-clipboard-748551b1-3a8e-456f-9907-86386d65d8ee.jpg",
     "title": "Under the streetlight",
     "width": 2048,
-    "height": 1698
+    "height": 1698,
+    "featured": true
   },
   {
     "src": "assets/codex-clipboard-817d6845-ebcc-4be3-958e-6b16e5795857.jpg",
