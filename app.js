@@ -272,7 +272,7 @@ const work=[
     "id": "medietilsynet-exam",
     "title": "Medietilsynet — Don’t believe everything online",
     "type": "Practice exam · Awareness advertisement",
-    "image": "assets/medietilsynet-cover.jpg",
+    "image": "assets/medietilsynet-thumbnail.png",
     "video": "assets/medietilsynet-exam.mp4",
     "category": "films",
     "role": "Director · Producer · Camera",
@@ -285,12 +285,12 @@ const work=[
       [
         "Main film · Three days",
         "We developed and produced the main advertisement over three days. The fake influencer and the aftermath turn an online scam into a concrete example of why viewers should question what they see."
-      ],
-      [
-        "Instagram carousel · Five hours",
-        "I was also tasked with adapting the supplied material for social media. I chose an Instagram carousel and created the adaptation in five hours, reworking the content for a format suited to the platform. A video preview of the carousel is not available yet."
       ]
-    ]
+    ],
+    "companionVideo": "assets/medietilsynet-instagram.mp4",
+    "companionPoster": "assets/medietilsynet-instagram-cover.jpg",
+    "companionTitle": "Instagram carousel · Five hours",
+    "companionText": "I was also tasked with adapting the supplied material for social media. I chose an Instagram carousel and created the adaptation in five hours, reworking the content for a format suited to the platform."
   }
 ];
 const photos=[
@@ -542,6 +542,10 @@ galleryBreakpoint.addEventListener('change',()=>{
  const gallery=document.querySelector('.featured-photos #photos');
  if(gallery){gallery.innerHTML=featuredPhotoColumns();setupMotion();window.portfolioScroll?.resize();}
 });
+function companionFilm(p){
+ if(!p.companionVideo)return '';
+ return `<section class="project-section companion-film"><h3>${p.companionTitle}</h3><p>${p.companionText}</p><video class="social-video" controls playsinline preload="metadata" poster="${p.companionPoster}" aria-label="${p.companionTitle}"><source src="${p.companionVideo}" type="video/mp4">${t('videoUnsupported')} <a href="${p.companionVideo}">${t('downloadFallback')}</a>.</video><p><a class="text-link" href="${p.companionVideo}" download>${t('download')}</a></p></section>`;
+}
 function portraitPanel(){return `<section class="section editorial-portrait"><div class="portrait-frame"><img src="assets/odin-editorial-portrait.png" alt="${t('editorialAlt')}" loading="lazy"><span class="hand">${t('portraitCaption')}</span></div><div><div class="eyebrow">${t('portraitEyebrow')}</div><h2>${t('portraitHeading')}</h2><p>${t('portraitText')}</p><a class="text-link" href="#about">${t('aboutMe')} ↗</a></div></section>`;}
 const withProjectViews=items=>[...items.filter(p=>p.id!=='haven-after'),...items.filter(p=>p.alsoIn?.includes('projects')).map(p=>({...p,id:p.id+'-project',category:'projects',image:p.projectImage||p.image,video:null,projectImage:null,filmRoute:'work/'+p.id})),...items.filter(p=>p.id==='haven-after')];
 function render(){
@@ -554,7 +558,7 @@ function render(){
  else if(route==='contact')app.innerHTML=`<section class="section contact-page"><div class="eyebrow">${t('haveStory')}</div><h2>${t('create')}</h2><p>${t('contactIntro')}</p><div class="contact-gate"><button type="button" class="contact-reveal" data-reveal-contact aria-expanded="false" aria-controls="contact-details">${t('reveal')}</button><div id="contact-details" class="contact-items" hidden></div></div><p class="draft-note">${t('based')}</p></section>`;
  else if(route.startsWith('work/')){
   const p=projects.find(p=>p.id===route.split('/')[1]);if(!p){location.hash='films';return;}
-  app.innerHTML=`<section class="section"><a class="text-link" href="#${p.category}">${t(p.category==='films'?'backFilms':'backProjects')}</a><div class="detail" style="margin-top:30px"><div>${p.video?`<video class="detail-image" controls playsinline preload="metadata" poster="${p.image}" aria-label="${p.title}"><source src="${p.video}" type="video/mp4">${t('videoUnsupported')} <a href="${p.video}">${t('downloadFallback')}</a>.</video>`:`<img class="detail-image" src="${p.image}" alt="${t('coverAlt',{title:p.title})}">`}<h2>${p.title}</h2><div class="eyebrow">${p.type}</div><p>${p.description||t('coming')}</p>${p.filmRoute?`<p><a class="watch-film-link" href="#${p.filmRoute}">${t('watchFilm')}</a></p>`:''}${p.externalUrl?`<p><a class="text-link" href="${p.externalUrl}" target="_blank" rel="noopener noreferrer">${p.externalLabel}</a></p>`:''}${(p.details||[]).map(([title,text])=>`<section class="project-section"><h3>${title}</h3><p>${text}</p></section>`).join('')}${p.projectImage?`<figure class="project-log-image"><img src="${p.projectImage}" alt="${p.projectImageAlt}" loading="lazy"><figcaption>${p.projectImageCaption}</figcaption></figure>`:''}${p.video?`<p><a class="text-link" href="${p.video}" download>${t('download')}</a></p>`:p.description&&!p.externalUrl&&!p.filmRoute&&!p.projectImage&&!p.inDevelopment?`<p class="draft-note">${t('stillsComing')}</p>`:''}</div><aside><img src="${p.image}" alt="${t('projectAlt',{title:p.title})}"><dl>${[['project',p.title],['format',p.type],['year',p.year||t('confirm')],['role',p.role||t('detailsComing')]].map(([key,value])=>`<dt>${t(key)}</dt><dd>${value}</dd>`).join('')}</dl></aside></div></section>`;
+  app.innerHTML=`<section class="section"><a class="text-link" href="#${p.category}">${t(p.category==='films'?'backFilms':'backProjects')}</a><div class="detail" style="margin-top:30px"><div>${p.video?`<video class="detail-image" controls playsinline preload="metadata" poster="${p.image}" aria-label="${p.title}"><source src="${p.video}" type="video/mp4">${t('videoUnsupported')} <a href="${p.video}">${t('downloadFallback')}</a>.</video>`:`<img class="detail-image" src="${p.image}" alt="${t('coverAlt',{title:p.title})}">`}<h2>${p.title}</h2><div class="eyebrow">${p.type}</div><p>${p.description||t('coming')}</p>${p.filmRoute?`<p><a class="watch-film-link" href="#${p.filmRoute}">${t('watchFilm')}</a></p>`:''}${p.externalUrl?`<p><a class="text-link" href="${p.externalUrl}" target="_blank" rel="noopener noreferrer">${p.externalLabel}</a></p>`:''}${(p.details||[]).map(([title,text])=>`<section class="project-section"><h3>${title}</h3><p>${text}</p></section>`).join('')}${companionFilm(p)}${p.projectImage?`<figure class="project-log-image"><img src="${p.projectImage}" alt="${p.projectImageAlt}" loading="lazy"><figcaption>${p.projectImageCaption}</figcaption></figure>`:''}${p.video?`<p><a class="text-link" href="${p.video}" download>${t('download')}</a></p>`:p.description&&!p.externalUrl&&!p.filmRoute&&!p.projectImage&&!p.inDevelopment?`<p class="draft-note">${t('stillsComing')}</p>`:''}</div><aside><img src="${p.image}" alt="${t('projectAlt',{title:p.title})}"><dl>${[['project',p.title],['format',p.type],['year',p.year||t('confirm')],['role',p.role||t('detailsComing')]].map(([key,value])=>`<dt>${t(key)}</dt><dd>${value}</dd>`).join('')}</dl></aside></div></section>`;
  }else app.innerHTML=heading(t('notFound'),t('missing'))+`<section class="section"><a class="text-link" href="#home">${t('backHome')}</a></section>`;
  document.title=`${route==='home'?t('homeTitle'):route.startsWith('work/')?(projects.find(p=>p.id===route.split('/')[1])?.title||t('project')):messages[language][route]||t('notFound')} — Odin James`;
  if(viewer.open)showPhoto(current);resetScroll(0);setupMotion();
