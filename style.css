@@ -49,8 +49,12 @@ html[data-motion="off"] *,html[data-motion="off"] *:before,html[data-motion="off
 /* Lenis handles interpolation without native smooth-scroll overlap. */
 html.lenis{scroll-behavior:auto!important}
 
-/* Keep the blur photograph at the top right at every gallery width. */
-.featured-photos .photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start;columns:auto}
+/* Closely packed columns preserve the full photographs without empty grid rows. */
+.photo-grid{column-gap:6px}
+.photo-grid .photo{margin:0 0 6px;break-inside:avoid}
+.featured-photos .photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;align-items:start;columns:auto}
+.photo-column{display:flex;flex-direction:column;gap:6px;min-width:0}
 .featured-photos .photo{margin:0;min-width:0}
-.featured-photos .photo[data-photo="27"]{grid-column:-2 / -1;grid-row:1}
+.featured-photos{padding-bottom:32px}
+.featured-photos+.page-grid{padding-top:32px;min-height:0}
 @media(max-width:750px){.featured-photos .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
