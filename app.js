@@ -1,3 +1,4 @@
+(()=>{
 const images={hero:'assets/odin-filming.jpg',city:'assets/cover-needed.svg',concert:'assets/glenghuset.jpg',mountain:'assets/odin-portrait.jpg',street:'assets/cover-needed.svg',camera:'assets/cover-needed.svg',lake:'assets/concert-blue.jpg',forest:'assets/blime.jpg'};
 const work=[
   {
@@ -517,9 +518,9 @@ function render(){
   app.innerHTML=`<section class="section"><a class="text-link" href="#${p.category}">${t(p.category==='films'?'backFilms':'backProjects')}</a><div class="detail" style="margin-top:30px"><div>${p.video?`<video class="detail-image" controls playsinline preload="metadata" poster="${p.image}" aria-label="${p.title}"><source src="${p.video}" type="video/mp4">${t('videoUnsupported')} <a href="${p.video}">${t('downloadFallback')}</a>.</video>`:`<img class="detail-image" src="${p.image}" alt="${t('coverAlt',{title:p.title})}">`}<h2>${p.title}</h2><div class="eyebrow">${p.type}</div><p>${p.description||t('coming')}</p>${p.filmRoute?`<p><a class="watch-film-link" href="#${p.filmRoute}">${t('watchFilm')}</a></p>`:''}${p.externalUrl?`<p><a class="text-link" href="${p.externalUrl}" target="_blank" rel="noopener noreferrer">${p.externalLabel}</a></p>`:''}${(p.details||[]).map(([title,text])=>`<section class="project-section"><h3>${title}</h3><p>${text}</p></section>`).join('')}${p.projectImage?`<figure class="project-log-image"><img src="${p.projectImage}" alt="${p.projectImageAlt}" loading="lazy"><figcaption>${p.projectImageCaption}</figcaption></figure>`:''}${p.video?`<p><a class="text-link" href="${p.video}" download>${t('download')}</a></p>`:p.description&&!p.externalUrl&&!p.filmRoute&&!p.projectImage&&!p.inDevelopment?`<p class="draft-note">${t('stillsComing')}</p>`:''}</div><aside><img src="${p.image}" alt="${t('projectAlt',{title:p.title})}"><dl>${[['project',p.title],['format',p.type],['year',p.year||t('confirm')],['role',p.role||t('detailsComing')]].map(([key,value])=>`<dt>${t(key)}</dt><dd>${value}</dd>`).join('')}</dl></aside></div></section>`;
  }else app.innerHTML=heading(t('notFound'),t('missing'))+`<section class="section"><a class="text-link" href="#home">${t('backHome')}</a></section>`;
  document.title=`${route==='home'?t('homeTitle'):route.startsWith('work/')?(projects.find(p=>p.id===route.split('/')[1])?.title||t('project')):messages[language][route]||t('notFound')} — Odin James`;
- if(viewer.open)showPhoto(current);window.scrollTo(0,0);setupMotion();
+ if(viewer.open)showPhoto(current);resetScroll(0);setupMotion();
 }
-function showPhoto(i){current=(i+photos.length)%photos.length;viewer.querySelector('img').src=photos[current].src;viewer.querySelector('img').alt=photoTitle(current);viewer.querySelector('figcaption').textContent=`${current+1} / ${photos.length} · ${photoTitle(current)}`;if(!viewer.open)viewer.showModal();}
+function showPhoto(i){current=(i+photos.length)%photos.length;viewer.querySelector('img').src=photos[current].src;viewer.querySelector('img').alt=photoTitle(current);viewer.querySelector('figcaption').textContent=`${current+1} / ${photos.length} · ${photoTitle(current)}`;if(!viewer.open){viewer.showModal();window.portfolioScroll?.stop();}}
 // Deterrent to basic scraping; these details can still be decoded by a determined visitor.
 function toggleContact(button){
  const target=document.querySelector('#contact-details');
@@ -532,13 +533,14 @@ function toggleContact(button){
 app.addEventListener('click',e=>{const contact=e.target.closest('[data-reveal-contact]');if(contact)toggleContact(contact);const photo=e.target.closest('[data-photo]');if(photo)showPhoto(Number(photo.dataset.photo));});
 document.querySelector('header').addEventListener('click',e=>{
  if(e.target.closest('#motion-toggle')){motionEnabled=!motionEnabled;try{localStorage.setItem('odin-motion',motionEnabled?'on':'off');}catch{}const button=e.target.closest('#motion-toggle');button.setAttribute('aria-pressed',String(!motionEnabled));button.setAttribute('aria-label',t(motionEnabled?'pauseMotion':'resumeMotion'));button.title=t(motionEnabled?'pauseMotion':'resumeMotion');button.textContent=motionEnabled?'Ⅱ':'▶';setupMotion();}
- if(e.target.closest('#language-toggle')){const y=window.scrollY;language=language==='en'?'nb':'en';try{localStorage.setItem('odin-language',language);}catch{}render();window.scrollTo(0,y);document.querySelector('#language-toggle').focus();}
+ if(e.target.closest('#language-toggle')){const y=window.scrollY;language=language==='en'?'nb':'en';try{localStorage.setItem('odin-language',language);}catch{}render();resetScroll(y);document.querySelector('#language-toggle').focus();}
  if(e.target.closest('.menu')){const open=document.querySelector('nav').classList.toggle('open');document.querySelector('.menu').setAttribute('aria-expanded',String(open));}
 });
 viewer.querySelector('.close').onclick=()=>viewer.close();viewer.querySelector('.next').onclick=()=>showPhoto(current+1);viewer.querySelector('.previous').onclick=()=>showPhoto(current-1);viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close();});document.addEventListener('keydown',e=>{if(viewer.open){if(e.key==='ArrowRight')showPhoto(current+1);if(e.key==='ArrowLeft')showPhoto(current-1);}});window.addEventListener('hashchange',render);render();
 
 function setupMotion(){
  document.documentElement.dataset.motion=motionEnabled?'on':'off';
+ configureSmoothScroll();
  revealObserver?.disconnect();
  const elements=[...app.querySelectorAll('.section-top,.card,.photo,.about-layout>div,.skills>div,.project-section,.detail>div,.detail>aside,.editorial-portrait>div,.cv-entry,.cv-sidebar>section')];
  if(!motionEnabled||!('IntersectionObserver' in window)){elements.forEach(el=>{el.classList.remove('reveal');el.classList.add('is-visible');});return;}
@@ -550,30 +552,11 @@ function cvPanel(){
  return `<section class="cv-panel"><div class="section-top"><div><div class="eyebrow">${t('cvEyebrow')}</div><h2>${t('cvHeading')}</h2><p>${t('cvIntro')}</p></div></div><div class="cv-sidebar cv-background"><section><h3 class="cv-label">${t('cvEducation')}</h3><h4>${t('cvStudy')}</h4><p class="cv-place">${t('cvSchool')}</p><p>${t('cvStudyText')}</p></section><section><h3 class="cv-label">${t('cvLanguages')}</h3><p>${t('cvEnglish')}</p><p>${t('cvNorwegian')}</p></section></div></section>`;
 }
 
-// Ease desktop wheel scrolling while preserving native touch and nested controls.
-(()=>{
- let frame=0,target=0,previousTime=0;
- const stop=()=>{cancelAnimationFrame(frame);frame=0;};
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
- function tick(time){
-  const elapsed=Math.min(50,time-previousTime||16);previousTime=time;
-  const max=Math.max(0,document.documentElement.scrollHeight-innerHeight);
-  target=Math.max(0,Math.min(target,max));
-  const next=scrollY+(target-scrollY)*(1-Math.exp(-elapsed/75));
-  window.scrollTo({top:Math.abs(target-next)<.5?target:next,behavior:'instant'});
-  if(Math.abs(target-scrollY)>.5)frame=requestAnimationFrame(tick);else frame=0;
- }
- window.addEventListener('wheel',event=>{
-  if(!motionEnabled||reduced.matches||event.ctrlKey||event.metaKey||viewer.open||Math.abs(event.deltaX)>Math.abs(event.deltaY)){stop();return;}
-  for(let el=event.target;el instanceof Element&&el!==document.body;el=el.parentElement){
-   if(/auto|scroll/.test(getComputedStyle(el).overflowY)&&el.scrollHeight>el.clientHeight){stop();return;}
-  }
-  const delta=event.deltaY*(event.deltaMode===1?16:event.deltaMode===2?innerHeight:1);
-  if(!delta||!event.cancelable)return;
-  event.preventDefault();
-  target=Math.max(0,Math.min((frame?target:scrollY)+delta,document.documentElement.scrollHeight-innerHeight));
-  if(!frame){previousTime=performance.now();frame=requestAnimationFrame(tick);}
- },{passive:false});
- for(const name of ['keydown','pointerdown','touchstart','hashchange','resize'])window.addEventListener(name,stop,{passive:true});
- reduced.addEventListener('change',stop);
+
+function resetScroll(top){
+ if(window.portfolioScroll){window.portfolioScroll.resize();window.portfolioScroll.scrollTo(top,{immediate:true,force:true});}
+ else window.scrollTo({top,left:0,behavior:'instant'});
+}
+viewer.addEventListener('close',()=>window.portfolioScroll?.start());
+
 })();

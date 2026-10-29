@@ -45,3 +45,6 @@ html[data-motion="off"] *,html[data-motion="off"] *:before,html[data-motion="off
 .moments-grid .photo img{aspect-ratio:1292/1173;height:auto;object-fit:cover;object-position:center}.moments-grid .photo[data-photo="21"] img{object-position:50% 58%}
 
 
+
+/* Lenis handles interpolation without native smooth-scroll overlap. */
+html.lenis{scroll-behavior:auto!important}
