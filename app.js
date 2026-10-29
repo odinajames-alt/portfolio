@@ -2,30 +2,6 @@
 const images={hero:'assets/odin-filming.jpg',city:'assets/cover-needed.svg',concert:'assets/glenghuset.jpg',mountain:'assets/odin-portrait.jpg',street:'assets/cover-needed.svg',camera:'assets/cover-needed.svg',lake:'assets/concert-blue.jpg',forest:'assets/blime.jpg'};
 const work=[
   {
-    "id": "medietilsynet-exam",
-    "title": "Medietilsynet — Don’t believe everything online",
-    "type": "Practice exam · Awareness advertisement",
-    "image": "assets/medietilsynet-cover.jpg",
-    "video": "assets/medietilsynet-exam.mp4",
-    "category": "films",
-    "role": "Group production · Instagram carousel adaptation",
-    "description": "For a practice exam, our group created an awareness advertisement based on a Medietilsynet brief for 10–12-year-olds. The message was simple: not everything you see online is true. We used a fictional AI-generated influencer promising free money through a link, followed by a scene showing the aftermath of the scam. This was a school exercise, not an official Medietilsynet commission.",
-    "details": [
-      [
-        "Researching the brief",
-        "We studied Medietilsynet’s communication, requirements, and guidelines to understand what kind of advertisement would fit the organisation and speak to our young target audience."
-      ],
-      [
-        "Main film · Three days",
-        "We developed and produced the main advertisement over three days. The fake influencer and the aftermath turn an online scam into a concrete example of why viewers should question what they see."
-      ],
-      [
-        "Instagram carousel · Five hours",
-        "I was also tasked with adapting the supplied material for social media. I chose an Instagram carousel and created the adaptation in five hours, reworking the content for a format suited to the platform. The social-media version will be added here soon."
-      ]
-    ]
-  },
-  {
     "id": "ukm",
     "video": "assets/ukm-festival-film.mp4",
     "title": "UKM Festival Introduksjonsvideo",
@@ -289,6 +265,30 @@ const work=[
       [
         "What I learned",
         "This was a valuable learning experience in camera work, cabling, and planning. It helped me connect my role behind the camera with the equipment and preparation needed to make a multicamera production work."
+      ]
+    ]
+  },
+  {
+    "id": "medietilsynet-exam",
+    "title": "Medietilsynet — Don’t believe everything online",
+    "type": "Practice exam · Awareness advertisement",
+    "image": "assets/medietilsynet-cover.jpg",
+    "video": "assets/medietilsynet-exam.mp4",
+    "category": "films",
+    "role": "Director · Producer · Camera",
+    "description": "For a practice exam, our group created an awareness advertisement based on a Medietilsynet brief for 10–12-year-olds. The message was simple: not everything you see online is true. We used a fictional AI-generated influencer promising free money through a link, followed by a scene showing the aftermath of the scam. This was a school exercise, not an official Medietilsynet commission. I was the director, producer, and camera operator.",
+    "details": [
+      [
+        "Researching the brief",
+        "We studied Medietilsynet’s communication, requirements, and guidelines to understand what kind of advertisement would fit the organisation and speak to our young target audience."
+      ],
+      [
+        "Main film · Three days",
+        "We developed and produced the main advertisement over three days. The fake influencer and the aftermath turn an online scam into a concrete example of why viewers should question what they see."
+      ],
+      [
+        "Instagram carousel · Five hours",
+        "I was also tasked with adapting the supplied material for social media. I chose an Instagram carousel and created the adaptation in five hours, reworking the content for a format suited to the platform. A video preview of the carousel is not available yet."
       ]
     ]
   }
