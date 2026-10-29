@@ -62,3 +62,5 @@ html.lenis{scroll-behavior:auto!important}
 .companion-film{margin-top:40px;padding-top:25px;border-top:1px solid #ffffff25}.social-video{display:block;width:100%;max-width:400px;aspect-ratio:9/16;height:auto;background:#000}
 
 .mobile-project-meta{display:none}@media(max-width:750px){.mobile-project-meta{display:flex;align-items:baseline;gap:12px;margin:20px 0}.mobile-project-meta dt{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.mobile-project-meta dd{margin:0}}
+
+.image-wrap:has(.thumbnail-year){container-type:inline-size}.thumbnail-year{position:absolute;top:7.5%;right:4%;background:#e6ce68;color:#151510;font-family:"Barlow Condensed",Arial,sans-serif;font-size:1.8cqw;font-weight:700;line-height:1;padding:.8cqw 1.3cqw;letter-spacing:0;pointer-events:none}

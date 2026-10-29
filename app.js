@@ -273,7 +273,7 @@ const work=[
     "year": "2026",
     "title": "Medietilsynet — Don’t believe everything online",
     "type": "Practice exam · Awareness advertisement",
-    "image": "assets/medietilsynet-thumbnail-2026.png",
+    "image": "assets/medietilsynet-thumbnail.png",
     "video": "assets/medietilsynet-exam.mp4",
     "category": "films",
     "role": "Director · Producer · Camera",
@@ -523,7 +523,7 @@ function chrome(){
  viewer.setAttribute('aria-label',t('photoViewer'));
  for(const [selector,key] of [['.close','close'],['.previous','previous'],['.next','next']])viewer.querySelector(selector).setAttribute('aria-label',t(key));
 }
-const card=(p,i)=>`<a class="card ${p.category==='films'?'film-card':''}" href="#work/${p.id}"><div class="image-wrap"><img src="${p.image}" alt="${t('coverAlt',{title:p.title})}" loading="lazy">${p.category==='films'?'<span class="film-play" aria-hidden="true">▶</span>':''}</div><div class="card-head"><div><h3>${p.title}</h3><small>${p.type}</small></div><span class="number">${String(i+1).padStart(2,'0')}</span></div></a>`;
+const card=(p,i)=>`<a class="card ${p.category==='films'?'film-card':''}" href="#work/${p.id}"><div class="image-wrap"><img src="${p.image}" alt="${t('coverAlt',{title:p.title})}" loading="lazy">${p.id==='medietilsynet-exam'?'<span class="thumbnail-year" aria-label="2026">2026</span>':''}${p.category==='films'?'<span class="film-play" aria-hidden="true">▶</span>':''}</div><div class="card-head"><div><h3>${p.title}</h3><small>${p.type}</small></div><span class="number">${String(i+1).padStart(2,'0')}</span></div></a>`;
 const heading=(title,description)=>`<div class="page-heading"><div class="eyebrow">${t('portfolio')}</div><h2>${title}</h2><p>${description}</p></div>`;
 const photoButton=i=>`<button class="photo" data-photo="${i}" aria-label="${t('view',{title:photoTitle(i)})}"><img src="${photos[i].src}" alt="${photoTitle(i)}" width="${photos[i].width}" height="${photos[i].height}" loading="lazy" decoding="async"><span>${photoTitle(i)} ↗</span></button>`;
 // Stack images independently so landscape and portrait photos leave no row gaps.
