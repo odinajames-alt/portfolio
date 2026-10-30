@@ -519,7 +519,7 @@ function chrome(){
  document.documentElement.lang=language;
  document.querySelector('meta[name="description"]').content=t('meta');
  document.querySelector('header').innerHTML=`<a class="brand" href="#home">ODIN JAMES<span>${t('brand')}</span></a><nav aria-label="${t('navLabel')}">${['home','films','photography','projects','about','contact'].map(route=>`<a href="#${route}" ${route==='contact'?'class="contact-link"':''}>${t(route==='contact'?'talk':route)}</a>`).join('')}</nav><div class="header-actions"><button type="button" id="motion-toggle" aria-pressed="${!motionEnabled}" aria-label="${t(motionEnabled?'pauseMotion':'resumeMotion')}" title="${t(motionEnabled?'pauseMotion':'resumeMotion')}">${motionEnabled?'Ⅱ':'▶'}</button><button type="button" id="language-toggle" lang="${language==='en'?'nb':'en'}" aria-label="${t('switchLanguage')}">${language==='en'?'Norsk bokmål':'English'}</button><button class="menu" aria-expanded="false" aria-label="${t('menuLabel')}">${t('menu')}</button></div>`;
- document.querySelector('footer').innerHTML=`<a class="brand" href="#home">ODIN JAMES</a><span>${t('tagline')}</span><a href="#contact">${t('conversation')}</a><small>© ${new Date().getFullYear()} Odin James</small>`;
+ document.querySelector('footer').innerHTML=`<a class="brand" href="#home">ODIN JAMES</a><span>${t('tagline')}</span>${location.hash==='#contact'?'':`<a href="#contact">${t('conversation')}</a>`}<small>© ${new Date().getFullYear()} Odin James</small>`;
  viewer.setAttribute('aria-label',t('photoViewer'));
  for(const [selector,key] of [['.close','close'],['.previous','previous'],['.next','next']])viewer.querySelector(selector).setAttribute('aria-label',t(key));
 }
